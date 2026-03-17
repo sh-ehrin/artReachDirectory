@@ -2,3 +2,18 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: red;
 }
+
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  position: fixed; /* Keeps the navbar fixed in the viewport */
+  top: 0; /* Positions it at the top */
+  width: 100%; /* Spans the full width */
+  z-index: 1000; /* Ensures it stays on top */
+}
+
+.content {
+  /* Add top padding equal to or larger than your navbar's height to prevent content overlap */
+  padding-top: 60px; /* Adjust this value based on your navbar's actual height */
+}
