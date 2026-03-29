@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brooklyn — ArtReach</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">Art<span>Reach</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../faq.html">Field Trip Guide</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <a href="../index.html" class="detail-back">← Back to All Boroughs</a>
+  <p class="page-hero-eyebrow">Browse by Institution Type</p>
+  <!-- EDIT (per borough file): Borough name in headline -->
+  <h1><em>Brooklyn</em></h1>
+</section>
+
+<!-- ── MAIN CONTENT ── -->
+<section class="section">
+
+  <!-- TYPE FILTER TABS -->
+  <div class="type-tabs">
+    <button class="type-tab active" onclick="filterType('all', this)">All</button>
+    <button class="type-tab" onclick="filterType('museum', this)">Museums</button>
+    <button class="type-tab" onclick="filterType('theatre', this)">Theatres</button>
+    <button class="type-tab" onclick="filterType('music', this)">Music Halls</button>
+  </div>
+
+  <!-- ── VENUE GRID ──
+       HOW TO ADD A VENUE:
+       1. Copy one complete <a class="venue-card"> block below
+       2. Paste it inside the .venue-grid div
+       3. Change data-type to "museum", "theatre", or "music"
+       4. Fill in all the <!-- EDIT --> fields
+       5. The card will automatically appear in the right filtered view
+  -->
+  <div class="venue-grid" id="venue-grid">
+
+    <!-- ═══════════════════════════════════════
+         VENUE CARD TEMPLATE — copy this block to add a new venue
+         Change data-type to: museum | theatre | music
+         ═══════════════════════════════════════ -->
+    <a href="../venues/venue-template.html" class="venue-card" data-type="museum">
+      <div class="venue-card-body">
+        <!-- EDIT: Institution type label (Museum / Theatre / Music Hall) -->
+        <div class="venue-card-type">Museum</div>
+        <!-- EDIT: Venue name -->
+        <div class="venue-card-name">The Metropolitan Museum of Art</div>
+        <!-- EDIT: 1-2 sentence description of what makes this venue great for students -->
+        <div class="venue-card-desc">One of the world's largest and most comprehensive art museums, with collections spanning 5,000 years of culture from every corner of the globe.</div>
+        <div class="venue-card-meta">
+          <!-- EDIT: Street address -->
+          <span>📍 1000 Fifth Ave, New York, NY 10028</span>
+          <!-- EDIT: Hours (or "Hours vary — check website") -->
+          <span>🕐 Sun–Thu 10am–5pm, Fri–Sat 10am–9pm</span>
+          <!-- EDIT: Phone number -->
+          <span>📞 (212) 535-7710</span>
+          <!-- EDIT: Website URL — update the href AND the display text -->
+          <span>🌐 <a href="https://www.metmuseum.org" target="_blank" onclick="event.stopPropagation()" style="color:var(--blush);">metmuseum.org</a></span>
+        </div>
+      </div>
+    </a>
+
+    <!-- ─── EXAMPLE THEATRE CARD ─── -->
+    <a href="../venues/venue-template.html" class="venue-card" data-type="theatre">
+      <div class="venue-card-body">
+        <div class="venue-card-type">Theatre</div>
+        <div class="venue-card-name">The Public Theater</div>
+        <div class="venue-card-desc">A landmark Off-Broadway institution committed to producing works that reflect the breadth of American experience, with robust education programs for NYC students.</div>
+        <div class="venue-card-meta">
+          <span>📍 425 Lafayette St, New York, NY 10003</span>
+          <span>🕐 Box office hours vary by production</span>
+          <span>📞 (212) 539-8500</span>
+          <span>🌐 <a href="https://publictheater.org" target="_blank" onclick="event.stopPropagation()" style="color:var(--blush);">publictheater.org</a></span>
+        </div>
+      </div>
+    </a>
+
+    <!-- ─── EXAMPLE MUSIC HALL CARD ─── -->
+    <a href="../venues/venue-template.html" class="venue-card" data-type="music">
+      <div class="venue-card-body">
+        <div class="venue-card-type">Music Hall</div>
+        <div class="venue-card-name">Carnegie Hall</div>
+        <div class="venue-card-desc">One of the most prestigious concert venues in the world, Carnegie Hall offers extensive education and student programs throughout the season.</div>
+        <div class="venue-card-meta">
+          <span>📍 881 Seventh Ave, New York, NY 10019</span>
+          <span>🕐 Box office Mon–Sat 11am–6pm</span>
+          <span>📞 (212) 247-7800</span>
+          <span>🌐 <a href="https://www.carnegiehall.org" target="_blank" onclick="event.stopPropagation()" style="color:var(--blush);">carnegiehall.org</a></span>
+        </div>
+      </div>
+    </a>
+
+    <!-- ADD MORE VENUE CARDS HERE — copy any card block above and edit the fields -->
+
+  </div><!-- end .venue-grid -->
+
+  <!-- Empty state (shown when a filter has no results) -->
+  <div id="empty-state" style="display:none;text-align:center;padding:4rem 0;color:var(--taupe);">
+    <div style="font-size:2.5rem;margin-bottom:1rem;">🏛</div>
+    <p style="font-family:var(--font-display);font-size:1.4rem;color:var(--navy);">No venues yet in this category.</p>
+    <p style="margin-top:.5rem;font-size:.88rem;">Check back soon, or <a href="../contact.html" style="color:var(--blush);">suggest one</a>.</p>
+  </div>
+
+</section>
+
+<footer>
+  <strong>ArtReach</strong>
+  © 2026 ArtReach. Connecting NYC students with culture.
+</footer>
+
+<script>
+  // Read ?type= from URL and pre-select the matching tab on load
+  function getUrlType() {
+    const params = new URLSearchParams(window.location.search);
+    const t = params.get('type');
+    if (t === 'museums') return 'museum';
+    if (t === 'theatres') return 'theatre';
+    if (t === 'music') return 'music';
+    return 'all';
+  }
+
+  function filterType(type, btn) {
+    // Update active tab
+    document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+
+    // Show/hide cards
+    const cards = document.querySelectorAll('.venue-card');
+    let visible = 0;
+    cards.forEach(card => {
+      const match = type === 'all' || card.dataset.type === type;
+      card.style.display = match ? 'block' : 'none';
+      if (match) visible++;
+    });
+
+    document.getElementById('empty-state').style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  // Apply URL param filter on load
+  window.addEventListener('DOMContentLoaded', () => {
+    const type = getUrlType();
+    if (type !== 'all') {
+      const tabMap = { museum: 1, theatre: 2, music: 3 };
+      const tabs = document.querySelectorAll('.type-tab');
+      filterType(type, tabs[tabMap[type]]);
+    }
+  });
+</script>
+
+</body>
+</html>
