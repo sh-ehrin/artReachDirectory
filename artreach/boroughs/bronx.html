@@ -1,164 +1,927 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Bronx — ArtReach</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Bronx — ArtReach</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html" class="nav-logo">Art<span>Reach</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../faq.html">Field Trip Guide</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-<nav>
-  <a href="../index.html" class="nav-logo">Art<span>Reach</span></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../about.html">About</a></li>
-    <li><a href="../faq.html">Field Trip Guide</a></li>
-    <li><a href="../contact.html">Contact</a></li>
-  </ul>
-</nav>
+    <!-- ── PAGE HERO ── -->
+    <section class="page-hero">
+      <a href="../index.html" class="detail-back">← Back to All Boroughs</a>
+      <p class="page-hero-eyebrow">Browse by Institution Type</p>
+      <!-- EDIT (per borough file): Borough name in headline -->
+      <h1><em>The Bronx</em></h1>
+    </section>
 
-<!-- ── PAGE HERO ── -->
-<section class="page-hero">
-  <a href="../index.html" class="detail-back">← Back to All Boroughs</a>
-  <p class="page-hero-eyebrow">Browse by Institution Type</p>
-  <!-- EDIT (per borough file): Borough name in headline -->
-  <h1><em>The Bronx</em></h1>
-</section>
+    <!-- ── MAIN CONTENT ── -->
+    <section class="section">
+      <!-- TYPE FILTER TABS -->
+      <div class="type-tabs">
+        <button class="type-tab active" onclick="filterType('all', this)">
+          All
+        </button>
+        <button class="type-tab" onclick="filterType('museum', this)">
+          Museums
+        </button>
+        <button class="type-tab" onclick="filterType('theatre', this)">
+          Theatres
+        </button>
+        <button class="type-tab" onclick="filterType('music', this)">
+          Music Halls
+        </button>
+      </div>
 
-<!-- ── MAIN CONTENT ── -->
-<section class="section">
-
-  <!-- TYPE FILTER TABS -->
-  <div class="type-tabs">
-    <button class="type-tab active" onclick="filterType('all', this)">All</button>
-    <button class="type-tab" onclick="filterType('museum', this)">Museums</button>
-    <button class="type-tab" onclick="filterType('theatre', this)">Theatres</button>
-    <button class="type-tab" onclick="filterType('music', this)">Music Halls</button>
-  </div>
-
-  <!-- ── VENUE GRID ──
+      <!-- ── VENUE GRID ──
        HOW TO ADD A VENUE:
        1. Copy one complete <a class="venue-card"> block below
        2. Paste it inside the .venue-grid div
        3. Change data-type to "museum", "theatre", or "music"
-       4. Fill in all the <!-- EDIT --> fields
-       5. The card will automatically appear in the right filtered view
-  -->
-  <div class="venue-grid" id="venue-grid">
+       4. Fill in all the fields 
+       5. The card will automatically appear in the right filtered view-->
 
-    <!-- ═══════════════════════════════════════
+      <div class="venue-grid" id="venue-grid">
+        <!-- ═══════════════════════════════════════
          VENUE CARD TEMPLATE — copy this block to add a new venue
          Change data-type to: museum | theatre | music
          ═══════════════════════════════════════ -->
-    <a href="../venues/venue-template.html" class="venue-card" data-type="museum">
-      <div class="venue-card-body">
-        <!-- EDIT: Institution type label (Museum / Theatre / Music Hall) -->
-        <div class="venue-card-type">Museum</div>
-        <!-- EDIT: Venue name -->
-        <div class="venue-card-name">The Metropolitan Museum of Art</div>
-        <!-- EDIT: 1-2 sentence description of what makes this venue great for students -->
-        <div class="venue-card-desc">One of the world's largest and most comprehensive art museums, with collections spanning 5,000 years of culture from every corner of the globe.</div>
-        <div class="venue-card-meta">
-          <!-- EDIT: Street address -->
-          <span>📍 1000 Fifth Ave, New York, NY 10028</span>
-          <!-- EDIT: Hours (or "Hours vary — check website") -->
-          <span>🕐 Sun–Thu 10am–5pm, Fri–Sat 10am–9pm</span>
-          <!-- EDIT: Phone number -->
-          <span>📞 (212) 535-7710</span>
-          <!-- EDIT: Website URL — update the href AND the display text -->
-          <span>🌐 <a href="https://www.metmuseum.org" target="_blank" onclick="event.stopPropagation()" style="color:var(--blush);">metmuseum.org</a></span>
-        </div>
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/baad.jpg"
+            alt="Bronx Academy of Arts and Dance"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">
+              Bronx Academy of Arts and Dance (BAAD!)
+            </div>
+            <div class="venue-card-desc">
+              Public multidisciplinary arts venue presenting formal dance,
+              music, and performance rooted in fine-arts traditions.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 2474 Westchester Avenue, Bronx, NY 10461</span>
+              <span>📞 (718) 918-2110</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.baadbronx.org/"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >baadbronx.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/bronx-music-heritage.jpg"
+            alt="Bronx Music Heritage Center"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">Bronx Music Heritage Center</div>
+            <div class="venue-card-desc">
+              Cultural performance space with curated concerts and music
+              presentations tied to artistic and historical traditions.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 438 East 163rd Street, Bronx, NY 10451</span>
+              <span>📞 (917) 557-2354</span>
+              <span
+                >🌐
+                <a
+                  href="https://bronxmusichall.org/"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >bronxmusichall.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/hostos.jpg"
+            alt="Hostos Center for the Arts & Culture"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">
+              Hostos Center for the Arts & Culture
+            </div>
+            <div class="venue-card-desc">
+              Major public arts center presenting classical concerts,
+              opera-adjacent works, ballet, and international fine arts.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 450 Grand Concourse, Bronx, NY 10451</span>
+              <span>📞 (718) 518-4455</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.hostos.cuny.edu/culturearts/"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >hostos.cuny.edu</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/lehman-center.jpg"
+            alt="Lehman Center for the Performing Arts"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">
+              Lehman Center for the Performing Arts
+            </div>
+            <div class="venue-card-desc">
+              Large public concert hall featuring orchestras, ballet companies,
+              classical soloists, and opera-adjacent performances.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 250 Bedford Park Blvd West, Bronx, NY 10468</span>
+              <span>📞 (718) 960-8833</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.lehmancenter.org/"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >lehmancenter.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/pregones.jpg"
+            alt="Pregones / Puerto Rican Traveling Theater"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">
+              Pregones / Puerto Rican Traveling Theater
+            </div>
+            <div class="venue-card-desc">
+              Professional performing arts institution offering publicly
+              ticketed music-driven and theatrical fine-arts works.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 571 Walton Ave, Bronx, NY 10451</span>
+              <span>📞 (718) 585-1202</span>
+              <span
+                >🌐
+                <a
+                  href="https://pregonesprtt.org/"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >pregonesprtt.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/riverdale-temple.jpg"
+            alt="Riverdale Temple Cultural Arts Series"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">
+              Riverdale Temple Cultural Arts Series
+            </div>
+            <div class="venue-card-desc">
+              Community cultural venue hosting public classical music, chamber
+              performances, and recital-style concerts.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 4545 Independence Ave, Bronx, NY 10471</span>
+              <span>📞 (718) 548-3800</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.riverdaletemple.org/"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >riverdaletemple.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/wave-hill.jpg"
+            alt="Wave Hill – Armor Hall"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">Wave Hill – Armor Hall</div>
+            <div class="venue-card-desc">
+              Elegant cultural hall offering public chamber music, classical
+              recitals, and interdisciplinary fine-arts events.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 4900 Independence Ave, Bronx, NY</span>
+              <span>📞 (718) 549-3200</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.wavehill.org/"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >wavehill.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+        <!-- ─── OPEN HYDRANT THEATER COMPANY ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Open Hydrant Theater Company</div>
+            <div class="venue-card-desc">
+              The first professional AEA ensemble theater company in the South
+              Bronx, presenting innovative classics and new works with a focus
+              on diversity, empowerment, and youth engagement.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 940 Garrison Ave, Bronx, NY 10474</span>
+              <span>📞 (718) 542-4139</span>
+              <span
+                >🌐
+                <a
+                  href="http://www.openhydrant.org"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >openhydrant.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── LEHMAN STAGES (LEHMAN COLLEGE) ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Lehman Stages (Lehman College)</div>
+            <div class="venue-card-desc">
+              Professional theater program at Lehman College operating the
+              500-seat Lovinger Theater, producing original cultural programming
+              for students and the broader Bronx community.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 250 Bedford Park Blvd W, Bronx, NY 10468</span>
+              <span>📞 (718) 960-8025</span>
+              <span
+                >🌐
+                <a
+                  href="http://www.lehmanstages.org"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >lehmanstages.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── CASITA MARIA CENTER FOR ARTS & EDUCATION ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">
+              Casita Maria Center for Arts &amp; Education
+            </div>
+            <div class="venue-card-desc">
+              Historic South Bronx arts and education center founded in 1934,
+              featuring performance spaces, a gallery, and dance and music
+              studios — with free after-school and youth programs rooted in
+              Latin culture.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 928 Simpson St, Bronx, NY 10459</span>
+              <span>📞 (718) 589-2230</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.casitamaria.org"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >casitamaria.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── RIVERDALE CHILDREN'S THEATRE ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Riverdale Children's Theatre</div>
+            <div class="venue-card-desc">
+              Award-winning nonprofit youth theater program producing full-scale
+              musical productions and offering training in theater, music, and
+              dance for children across the Bronx and beyond.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 660 W 237th St, Bronx, NY 10463</span>
+              <span>📞 (646) 436-3045</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.riverdaletheatre.org"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >riverdaletheatre.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── CITY ISLAND THEATER GROUP (CITG) ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">City Island Theater Group (CITG)</div>
+            <div class="venue-card-desc">
+              Community theater on City Island producing live performances for
+              audiences of all ages since 1999, including musicals, dramas, and
+              free outdoor Shakespeare productions.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 116 City Island Ave, Bronx, NY 10464</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.cityislandtheatergroup.com"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >cityislandtheatergroup.com</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Bartow-Pell Mansion Museum</div>
+            <div class="venue-card-desc">
+              Historic 19th-century mansion and carriage house set within Pelham
+              Bay Park, offering guided tours of period rooms and grounds that
+              illuminate the history of New York's early elite.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 895 Shore Road, Pelham Bay Park, Bronx, NY 10464</span>
+              <span>📞 (718) 885-1461</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.bartowpellmansionmuseum.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >bartowpellmansionmuseum.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">BronxArtSpace</div>
+            <div class="venue-card-desc">
+              Contemporary gallery space in the South Bronx presenting rotating
+              exhibitions by local and emerging artists, with a focus on
+              community-rooted visual art and creative expression.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 700 Manida Street, Bronx, NY 10474</span>
+              <span>📞 (347) 477-7023</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.bronxartspace.com"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >bronxartspace.com</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Bronx Documentary Center</div>
+            <div class="venue-card-desc">
+              Gallery and education center dedicated to documentary photography
+              and film, presenting socially engaged exhibitions and youth media
+              programs that amplify underrepresented stories.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 614 Courtlandt Ave, Bronx, NY 10451</span>
+              <span>📞 (718) 993-3512</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.bronxdoc.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >bronxdoc.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">The Bronx Museum of the Arts</div>
+            <div class="venue-card-desc">
+              Free admission contemporary art museum on the Grand Concourse
+              presenting exhibitions by artists of African, Asian, and Latin
+              American descent, with robust school group and education programs.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 1040 Grand Concourse, Bronx, NY 10456</span>
+              <span>📞 (718) 681-6000</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.bronxmuseum.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >bronxmuseum.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Bronx River Art Center</div>
+            <div class="venue-card-desc">
+              Community arts center along the Bronx River offering gallery
+              exhibitions, youth art workshops, and after-school programming
+              with a mission rooted in environmental and cultural stewardship.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 1087 E. Tremont Ave., Bronx, NY 10460</span>
+              <span>📞 (718) 589-5819</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.bronxriverart.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >bronxriverart.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">BxArts Factory</div>
+            <div class="venue-card-desc">
+              South Bronx arts venue presenting public exhibitions, workshops,
+              and community programming that celebrates local creative talent
+              and fosters artistic engagement across the borough.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 240 East 153rd St., Bronx, NY 10451</span>
+              <span>📞 (929) 614-4344</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.bxartsfactory.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >bxartsfactory.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Edgar Allan Poe Cottage</div>
+            <div class="venue-card-desc">
+              Historic cottage where Poe lived from 1846 to 1849, now a museum
+              operated by the Bronx Historical Society offering guided tours and
+              educational programs tied to literature and 19th-century New York.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 2640 Grand Concourse, Bronx, NY 10458</span>
+              <span>📞 (718) 881-8900</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.bronxhistoricalsociety.org/poe-cottage"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >bronxhistoricalsociety.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Longwood Art Gallery</div>
+            <div class="venue-card-desc">
+              Artist-driven gallery supporting Bronx-based and Latino artists
+              through curated exhibitions and public programming, operated by
+              Bronx Council on the Arts at Hostos Community College.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 2700 East Tremont Ave., Bronx, NY 10461</span>
+              <span>📞 (718) 931-9500</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.bronxarts.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >bronxarts.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Museum of Bronx History</div>
+            <div class="venue-card-desc">
+              Local history museum operated by the Bronx Historical Society
+              inside the Valentine-Varian House, exploring the social, cultural,
+              and political history of the Bronx from colonial times to today.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 3266 Bainbridge Avenue, Bronx, NY 10467</span>
+              <span>📞 (718) 881-8900</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.bronxhistoricalsociety.org/museum"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >bronxhistoricalsociety.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Van Cortlandt House Museum</div>
+            <div class="venue-card-desc">
+              New York City's oldest surviving house, built in 1748, offering
+              guided tours of restored colonial-era rooms and educational
+              programs focused on early American history and life in the Hudson
+              Valley.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 Van Cortlandt Park, 6036 Broadway, Bronx, NY 10471</span>
+              <span>📞 (718) 543-3344</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.vchm.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >vchm.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+        <!-- ADD MORE VENUE CARDS HERE — copy any card block above and edit the fields -->
       </div>
-    </a>
+      <!-- end .venue-grid -->
 
-    <!-- ─── EXAMPLE THEATRE CARD ─── -->
-    <a href="../venues/venue-template.html" class="venue-card" data-type="theatre">
-      <div class="venue-card-body">
-        <div class="venue-card-type">Theatre</div>
-        <div class="venue-card-name">The Public Theater</div>
-        <div class="venue-card-desc">A landmark Off-Broadway institution committed to producing works that reflect the breadth of American experience, with robust education programs for NYC students.</div>
-        <div class="venue-card-meta">
-          <span>📍 425 Lafayette St, New York, NY 10003</span>
-          <span>🕐 Box office hours vary by production</span>
-          <span>📞 (212) 539-8500</span>
-          <span>🌐 <a href="https://publictheater.org" target="_blank" onclick="event.stopPropagation()" style="color:var(--blush);">publictheater.org</a></span>
-        </div>
+      <!-- Empty state (shown when a filter has no results) -->
+      <div
+        id="empty-state"
+        style="
+          display: none;
+          text-align: center;
+          padding: 4rem 0;
+          color: var(--taupe);
+        "
+      >
+        <div style="font-size: 2.5rem; margin-bottom: 1rem">🏛</div>
+        <p
+          style="
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--navy);
+          "
+        >
+          No venues yet in this category.
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.88rem">
+          Check back soon, or
+          <a href="../contact.html" style="color: var(--blush)">suggest one</a>.
+        </p>
       </div>
-    </a>
+    </section>
 
-    <!-- ─── EXAMPLE MUSIC HALL CARD ─── -->
-    <a href="../venues/venue-template.html" class="venue-card" data-type="music">
-      <div class="venue-card-body">
-        <div class="venue-card-type">Music Hall</div>
-        <div class="venue-card-name">Carnegie Hall</div>
-        <div class="venue-card-desc">One of the most prestigious concert venues in the world, Carnegie Hall offers extensive education and student programs throughout the season.</div>
-        <div class="venue-card-meta">
-          <span>📍 881 Seventh Ave, New York, NY 10019</span>
-          <span>🕐 Box office Mon–Sat 11am–6pm</span>
-          <span>📞 (212) 247-7800</span>
-          <span>🌐 <a href="https://www.carnegiehall.org" target="_blank" onclick="event.stopPropagation()" style="color:var(--blush);">carnegiehall.org</a></span>
-        </div>
-      </div>
-    </a>
+    <footer>
+      <strong>ArtReach</strong>
+      © 2026 ArtReach. Connecting NYC students with culture.
+    </footer>
 
-    <!-- ADD MORE VENUE CARDS HERE — copy any card block above and edit the fields -->
-
-  </div><!-- end .venue-grid -->
-
-  <!-- Empty state (shown when a filter has no results) -->
-  <div id="empty-state" style="display:none;text-align:center;padding:4rem 0;color:var(--taupe);">
-    <div style="font-size:2.5rem;margin-bottom:1rem;">🏛</div>
-    <p style="font-family:var(--font-display);font-size:1.4rem;color:var(--navy);">No venues yet in this category.</p>
-    <p style="margin-top:.5rem;font-size:.88rem;">Check back soon, or <a href="../contact.html" style="color:var(--blush);">suggest one</a>.</p>
-  </div>
-
-</section>
-
-<footer>
-  <strong>ArtReach</strong>
-  © 2026 ArtReach. Connecting NYC students with culture.
-</footer>
-
-<script>
-  // Read ?type= from URL and pre-select the matching tab on load
-  function getUrlType() {
-    const params = new URLSearchParams(window.location.search);
-    const t = params.get('type');
-    if (t === 'museums') return 'museum';
-    if (t === 'theatres') return 'theatre';
-    if (t === 'music') return 'music';
-    return 'all';
-  }
-
-  function filterType(type, btn) {
-    // Update active tab
-    document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('active'));
-    if (btn) btn.classList.add('active');
-
-    // Show/hide cards
-    const cards = document.querySelectorAll('.venue-card');
-    let visible = 0;
-    cards.forEach(card => {
-      const match = type === 'all' || card.dataset.type === type;
-      card.style.display = match ? 'block' : 'none';
-      if (match) visible++;
-    });
-
-    document.getElementById('empty-state').style.display = visible === 0 ? 'block' : 'none';
-  }
-
-  // Apply URL param filter on load
-  window.addEventListener('DOMContentLoaded', () => {
-    const type = getUrlType();
-    if (type !== 'all') {
-      const tabMap = { museum: 1, theatre: 2, music: 3 };
-      const tabs = document.querySelectorAll('.type-tab');
-      filterType(type, tabs[tabMap[type]]);
-    }
-  });
-</script>
-
-</body>
+    <script src="../script.js"></script>
+  </body>
 </html>

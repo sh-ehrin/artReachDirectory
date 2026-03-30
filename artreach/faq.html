@@ -1,97 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Field Trip Guide — ArtReach</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>
-  .faq-section-title {
-    font-family: var(--font-display);
-    font-size: 1.5rem; color: var(--navy);
-    font-weight: 400; margin: 2.5rem 0 1rem;
-  }
-  .tip-box {
-    background: var(--brown); border-radius: 6px;
-    padding: 1.4rem 1.6rem; margin: 2rem 0;
-    border-left: 3px solid var(--blush);
-  }
-  .tip-box p { color: var(--taupe); font-size: .88rem; line-height: 1.8; }
-  .tip-box strong { color: var(--sand); font-weight: 400; }
-</style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Field Trip Guide — ArtReach</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .faq-section-title {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        color: var(--navy);
+        font-weight: 400;
+        margin: 2.5rem 0 1rem;
+      }
+      .tip-box {
+        background: var(--brown);
+        border-radius: 6px;
+        padding: 1.4rem 1.6rem;
+        margin: 2rem 0;
+        border-left: 3px solid var(--blush);
+      }
+      .tip-box p {
+        color: var(--taupe);
+        font-size: 0.88rem;
+        line-height: 1.8;
+      }
+      .tip-box strong {
+        color: var(--sand);
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-logo">Art<span>Reach</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html" class="active">Field Trip Guide</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-<nav>
-  <a href="index.html" class="nav-logo">Art<span>Reach</span></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="faq.html" class="active">Field Trip Guide</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+    <section class="page-hero">
+      <p class="page-hero-eyebrow">Resources for Educators</p>
+      <h1>Field Trip <em>Guide</em></h1>
+      <!-- EDIT: Subtitle for FAQ page -->
+      <p>
+        Everything you need to plan a smooth, curriculum-aligned cultural field
+        trip for your NYC public school students.
+      </p>
+    </section>
 
-<section class="page-hero">
-  <p class="page-hero-eyebrow">Resources for Educators</p>
-  <h1>Field Trip <em>Guide</em></h1>
-  <!-- EDIT: Subtitle for FAQ page -->
-  <p>Everything you need to plan a smooth, curriculum-aligned cultural field trip for your NYC public school students.</p>
-</section>
+    <section class="section" style="max-width: 820px; margin: 0 auto">
+      <!-- ── TIP BOX ── -->
+      <!-- EDIT: Featured tip at the top of the page -->
+      <div class="tip-box">
+        <p>
+          <strong>Pro tip:</strong> Most NYC cultural institutions offer free or
+          reduced-cost admission for public school student groups. Always call
+          the education department directly before purchasing tickets — you may
+          qualify for a fully subsidized visit.
+        </p>
+      </div>
 
-<section class="section" style="max-width:820px;margin:0 auto;">
-
-  <!-- ── TIP BOX ── -->
-  <!-- EDIT: Featured tip at the top of the page -->
-  <div class="tip-box">
-    <p><strong>Pro tip:</strong> Most NYC cultural institutions offer free or reduced-cost admission for public school student groups. Always call the education department directly before purchasing tickets — you may qualify for a fully subsidized visit.</p>
-  </div>
-
-  <!-- ════════════════════════════════════════════
+      <!-- ════════════════════════════════════════════
        FAQ SECTION 1: Planning
        To add a question: copy one full .faq-item block and paste it below the last one.
        ════════════════════════════════════════════ -->
-  <h2 class="faq-section-title">Planning Your Trip</h2>
-  <div id="faq-planning">
+      <h2 class="faq-section-title">Planning Your Trip</h2>
+      <div id="faq-planning">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <!-- EDIT: Question text -->
+            How far in advance should I book a field trip?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <!-- EDIT: Answer text -->
+            Most institutions recommend booking 4–6 weeks in advance. For highly
+            popular programs (such as those at Carnegie Hall or the Met), 8–10
+            weeks is advisable, especially for spring semester trips. Always
+            confirm availability with the institution's education department
+            directly.
+          </div>
+        </div>
 
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <!-- EDIT: Question text -->
-        How far in advance should I book a field trip?
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-a">
-        <!-- EDIT: Answer text -->
-        Most institutions recommend booking 4–6 weeks in advance. For highly popular programs (such as those at Carnegie Hall or the Met), 8–10 weeks is advisable, especially for spring semester trips. Always confirm availability with the institution's education department directly.
-      </div>
-    </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <!-- EDIT: Question text -->
+            What paperwork does my school require before a trip?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <!-- EDIT: Answer text -->
+            Requirements vary by school and district. Generally you will need: a
+            signed principal approval form, parent/guardian permission slips for
+            all students, a completed DOE trip request form, and proof of
+            transportation arrangements. Contact your school's trip coordinator
+            early in the process.
+          </div>
+        </div>
 
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <!-- EDIT: Question text -->
-        What paperwork does my school require before a trip?
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-a">
-        <!-- EDIT: Answer text -->
-        Requirements vary by school and district. Generally you will need: a signed principal approval form, parent/guardian permission slips for all students, a completed DOE trip request form, and proof of transportation arrangements. Contact your school's trip coordinator early in the process.
-      </div>
-    </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <!-- EDIT: Question text -->
+            How do I find out if an institution has school group programs?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <!-- EDIT: Answer text -->
+            Every venue listed in ArtReach has a website link on its detail
+            page. Look for an "Education," "School Groups," or "Group Visits"
+            section. If you can't find it, call the main number and ask to be
+            connected to the education department — they are almost always very
+            helpful.
+          </div>
+        </div>
 
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <!-- EDIT: Question text -->
-        How do I find out if an institution has school group programs?
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-a">
-        <!-- EDIT: Answer text -->
-        Every venue listed in ArtReach has a website link on its detail page. Look for an "Education," "School Groups," or "Group Visits" section. If you can't find it, call the main number and ask to be connected to the education department — they are almost always very helpful.
-      </div>
-    </div>
-
-    <!-- ADD MORE PLANNING QUESTIONS HERE:
+        <!-- ADD MORE PLANNING QUESTIONS HERE:
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">
         Your question here?
@@ -100,103 +131,112 @@
       <div class="faq-a">Your answer here.</div>
     </div>
     -->
+      </div>
 
-  </div>
-
-  <!-- ════════════════════════════════════════════
+      <!-- ════════════════════════════════════════════
        FAQ SECTION 2: Logistics
        ════════════════════════════════════════════ -->
-  <h2 class="faq-section-title">Day-Of Logistics</h2>
-  <div id="faq-logistics">
+      <h2 class="faq-section-title">Day-Of Logistics</h2>
+      <div id="faq-logistics">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <!-- EDIT: Question text -->
+            What is the recommended chaperone-to-student ratio?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <!-- EDIT: Answer text -->
+            NYC DOE guidelines generally require one adult chaperone per ten
+            students for high school trips, though individual institutions may
+            have their own requirements. Always confirm with the venue ahead of
+            time. Note that chaperones typically receive free admission.
+          </div>
+        </div>
 
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <!-- EDIT: Question text -->
-        What is the recommended chaperone-to-student ratio?
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-a">
-        <!-- EDIT: Answer text -->
-        NYC DOE guidelines generally require one adult chaperone per ten students for high school trips, though individual institutions may have their own requirements. Always confirm with the venue ahead of time. Note that chaperones typically receive free admission.
-      </div>
-    </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <!-- EDIT: Question text -->
+            What should students bring to a cultural institution?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <!-- EDIT: Answer text -->
+            Students should bring their student ID, a notebook or sketchbook if
+            appropriate to the activity, and any materials specified by the
+            institution's education department. Encourage students to leave
+            large bags at home if possible, as many venues have strict bag-check
+            policies.
+          </div>
+        </div>
 
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <!-- EDIT: Question text -->
-        What should students bring to a cultural institution?
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-a">
-        <!-- EDIT: Answer text -->
-        Students should bring their student ID, a notebook or sketchbook if appropriate to the activity, and any materials specified by the institution's education department. Encourage students to leave large bags at home if possible, as many venues have strict bag-check policies.
-      </div>
-    </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <!-- EDIT: Question text -->
+            How should I prepare students before the visit?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <!-- EDIT: Answer text -->
+            A short pre-visit lesson or discussion significantly improves
+            student engagement and retention. Most institutions provide free
+            educator resources and lesson plans on their websites. Even a
+            20-minute introduction to the artists, history, or themes students
+            will encounter can make a meaningful difference.
+          </div>
+        </div>
 
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <!-- EDIT: Question text -->
-        How should I prepare students before the visit?
-        <span class="faq-icon">+</span>
+        <!-- ADD MORE LOGISTICS QUESTIONS HERE -->
       </div>
-      <div class="faq-a">
-        <!-- EDIT: Answer text -->
-        A short pre-visit lesson or discussion significantly improves student engagement and retention. Most institutions provide free educator resources and lesson plans on their websites. Even a 20-minute introduction to the artists, history, or themes students will encounter can make a meaningful difference.
-      </div>
-    </div>
 
-    <!-- ADD MORE LOGISTICS QUESTIONS HERE -->
-
-  </div>
-
-  <!-- ════════════════════════════════════════════
+      <!-- ════════════════════════════════════════════
        FAQ SECTION 3: Cost & Funding
        ════════════════════════════════════════════ -->
-  <h2 class="faq-section-title">Cost & Funding</h2>
-  <div id="faq-cost">
+      <h2 class="faq-section-title">Cost & Funding</h2>
+      <div id="faq-cost">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <!-- EDIT: Question text -->
+            Are there free admission options for NYC public school students?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <!-- EDIT: Answer text -->
+            Many institutions offer free or deeply discounted admission for NYC
+            public school groups. Programs like NYC Free Arts, the Cultural
+            Institutions Group (CIG), and Title I funding can offset or
+            eliminate costs. Always ask the education department about school
+            group pricing before assuming admission is paid.
+          </div>
+        </div>
 
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <!-- EDIT: Question text -->
-        Are there free admission options for NYC public school students?
-        <span class="faq-icon">+</span>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <!-- EDIT: Question text -->
+            What funding sources can cover transportation costs?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <!-- EDIT: Answer text -->
+            Transportation is often the biggest barrier for field trips.
+            Possible funding sources include: your school's discretionary
+            budget, parent-teacher associations, DOE Arts Counts grants, and
+            direct grants from cultural institutions themselves. Some venues
+            partner with the MTA or charter bus services to subsidize
+            transportation for public school groups.
+          </div>
+        </div>
+
+        <!-- ADD MORE COST QUESTIONS HERE -->
       </div>
-      <div class="faq-a">
-        <!-- EDIT: Answer text -->
-        Many institutions offer free or deeply discounted admission for NYC public school groups. Programs like NYC Free Arts, the Cultural Institutions Group (CIG), and Title I funding can offset or eliminate costs. Always ask the education department about school group pricing before assuming admission is paid.
-      </div>
-    </div>
 
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <!-- EDIT: Question text -->
-        What funding sources can cover transportation costs?
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-a">
-        <!-- EDIT: Answer text -->
-        Transportation is often the biggest barrier for field trips. Possible funding sources include: your school's discretionary budget, parent-teacher associations, DOE Arts Counts grants, and direct grants from cultural institutions themselves. Some venues partner with the MTA or charter bus services to subsidize transportation for public school groups.
-      </div>
-    </div>
+      <div style="padding: 2rem 0"></div>
+    </section>
 
-    <!-- ADD MORE COST QUESTIONS HERE -->
+    <footer>
+      <strong>ArtReach</strong>
+      © 2026 ArtReach. Connecting NYC students with culture.
+    </footer>
 
-  </div>
-
-  <div style="padding:2rem 0;"></div>
-</section>
-
-<footer>
-  <strong>ArtReach</strong>
-  © 2026 ArtReach. Connecting NYC students with culture.
-</footer>
-
-<script>
-  function toggleFaq(el) {
-    const item = el.closest('.faq-item');
-    item.classList.toggle('open');
-  }
-</script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

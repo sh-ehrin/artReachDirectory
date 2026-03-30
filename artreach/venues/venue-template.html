@@ -1,114 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- EDIT: Page title = Venue Name — ArtReach -->
-<title>Venue Name — ArtReach</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- EDIT: Page title = Venue Name — ArtReach -->
+    <title>Venue Name — ArtReach</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html" class="nav-logo">Art<span>Reach</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../faq.html">Field Trip Guide</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-<nav>
-  <a href="../index.html" class="nav-logo">Art<span>Reach</span></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../about.html">About</a></li>
-    <li><a href="../faq.html">Field Trip Guide</a></li>
-    <li><a href="../contact.html">Contact</a></li>
-  </ul>
-</nav>
+    <!-- ── VENUE HERO ── -->
+    <div class="detail-hero">
+      <!-- EDIT: Update href to link back to the correct borough page, e.g. ../boroughs/manhattan.html -->
+      <a href="../boroughs/manhattan.html" class="detail-back"
+        >← Back to Manhattan</a
+      >
 
-<!-- ── VENUE HERO ── -->
-<div class="detail-hero">
-  <!-- EDIT: Update href to link back to the correct borough page, e.g. ../boroughs/manhattan.html -->
-  <a href="../boroughs/manhattan.html" class="detail-back">← Back to Manhattan</a>
+      <!-- EDIT: Institution type (Museum / Theatre / Music Hall) -->
+      <div class="detail-type">Museum</div>
 
-  <!-- EDIT: Institution type (Museum / Theatre / Music Hall) -->
-  <div class="detail-type">Museum</div>
+      <!-- EDIT: Full venue name -->
+      <div class="detail-name">The Metropolitan<br />Museum of Art</div>
+    </div>
 
-  <!-- EDIT: Full venue name -->
-  <div class="detail-name">The Metropolitan<br>Museum of Art</div>
-</div>
-
-<!-- ── VENUE BODY ── -->
-<div class="detail-body">
-
-  <!-- LEFT: Description & additional info -->
-  <div>
-    <!-- EDIT: 2–4 paragraph description of the venue.
+    <!-- ── VENUE BODY ── -->
+    <div class="detail-body">
+      <!-- LEFT: Description & additional info -->
+      <div>
+        <!-- EDIT: 2–4 paragraph description of the venue.
          Include what makes it special, what types of programs exist for students,
          any notable collections or performances, and any field-trip-specific notes. -->
-    <p class="detail-desc">
-      The Metropolitan Museum of Art is one of the world's greatest museums, with a permanent collection of more than two million works spanning five thousand years of world culture. From ancient Egyptian artifacts to modern masterpieces, the Met offers an unparalleled breadth of human creativity under one roof.
-    </p>
-    <p class="detail-desc">
-      The Met's education department provides extensive resources for school groups, including guided tours aligned with New York State curriculum standards, hands-on workshops, and free educator materials. Group admission rates are available for public school students.
-    </p>
+        <p class="detail-desc">
+          The Metropolitan Museum of Art is one of the world's greatest museums,
+          with a permanent collection of more than two million works spanning
+          five thousand years of world culture. From ancient Egyptian artifacts
+          to modern masterpieces, the Met offers an unparalleled breadth of
+          human creativity under one roof.
+        </p>
+        <p class="detail-desc">
+          The Met's education department provides extensive resources for school
+          groups, including guided tours aligned with New York State curriculum
+          standards, hands-on workshops, and free educator materials. Group
+          admission rates are available for public school students.
+        </p>
 
-    <!-- EDIT (optional): Add a "What to See" or "Student Programs" section if relevant -->
-    <h3 style="font-family:var(--font-display);font-size:1.25rem;color:var(--navy);font-weight:400;margin-bottom:.75rem;">Student Programs</h3>
-    <!-- EDIT: List or paragraph describing programs for student groups -->
-    <p class="detail-desc" style="margin-bottom:0;">
-      The Met offers free school group visits for NYC public school students, including self-guided and educator-led tours. Their "Met for Schools" program provides curriculum-connected gallery experiences for students at all grade levels. Pre-visit materials are available on their website.
-    </p>
-  </div>
+        <!-- EDIT (optional): Add a "What to See" or "Student Programs" section if relevant -->
+        <h3
+          style="
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--navy);
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+          "
+        >
+          Student Programs
+        </h3>
+        <!-- EDIT: List or paragraph describing programs for student groups -->
+        <p class="detail-desc" style="margin-bottom: 0">
+          The Met offers free school group visits for NYC public school
+          students, including self-guided and educator-led tours. Their "Met for
+          Schools" program provides curriculum-connected gallery experiences for
+          students at all grade levels. Pre-visit materials are available on
+          their website.
+        </p>
+      </div>
 
-  <!-- RIGHT: Info card (sticky sidebar) -->
-  <div>
-    <div class="detail-info-card" style="position:sticky;top:80px;">
-      <h3>Visit Information</h3>
+      <!-- RIGHT: Info card (sticky sidebar) -->
+      <div>
+        <div class="detail-info-card" style="position: sticky; top: 80px">
+          <h3>Visit Information</h3>
 
-      <span class="info-label">Address</span>
-      <!-- EDIT: Full street address -->
-      <p>1000 Fifth Avenue<br>New York, NY 10028</p>
+          <span class="info-label">Address</span>
+          <!-- EDIT: Full street address -->
+          <p>1000 Fifth Avenue<br />New York, NY 10028</p>
 
-      <span class="info-label">Hours</span>
-      <!-- EDIT: Hours of operation — be specific per day if needed -->
-      <p>
-        Sunday – Thursday: 10am – 5pm<br>
-        Friday – Saturday: 10am – 9pm<br>
-        Closed Thanksgiving & Christmas
-      </p>
+          <span class="info-label">Hours</span>
+          <!-- EDIT: Hours of operation — be specific per day if needed -->
+          <p>
+            Sunday – Thursday: 10am – 5pm<br />
+            Friday – Saturday: 10am – 9pm<br />
+            Closed Thanksgiving & Christmas
+          </p>
 
-      <span class="info-label">Admission</span>
-      <!-- EDIT: Admission pricing, especially for student groups -->
-      <p>Free for NYC public school student groups.<br>Adult general: $30</p>
+          <span class="info-label">Admission</span>
+          <!-- EDIT: Admission pricing, especially for student groups -->
+          <p>
+            Free for NYC public school student groups.<br />Adult general: $30
+          </p>
 
-      <span class="info-label">Phone</span>
-      <!-- EDIT: Main phone number -->
-      <p><a href="tel:2125357710">(212) 535-7710</a></p>
+          <span class="info-label">Phone</span>
+          <!-- EDIT: Main phone number -->
+          <p><a href="tel:2125357710">(212) 535-7710</a></p>
 
-      <span class="info-label">Website</span>
-      <!-- EDIT: Website URL — update both href and display text -->
-      <p><a href="https://www.metmuseum.org" target="_blank">metmuseum.org</a></p>
+          <span class="info-label">Website</span>
+          <!-- EDIT: Website URL — update both href and display text -->
+          <p>
+            <a href="https://www.metmuseum.org" target="_blank"
+              >metmuseum.org</a
+            >
+          </p>
 
-      <span class="info-label">Education / Groups</span>
-      <!-- EDIT: Direct link or phone number for education/school groups department -->
-      <p><a href="https://www.metmuseum.org/learn/schools" target="_blank">metmuseum.org/learn/schools</a></p>
+          <span class="info-label">Education / Groups</span>
+          <!-- EDIT: Direct link or phone number for education/school groups department -->
+          <p>
+            <a href="https://www.metmuseum.org/learn/schools" target="_blank"
+              >metmuseum.org/learn/schools</a
+            >
+          </p>
 
-      <span class="info-label">Getting There</span>
-      <!-- EDIT: Transit directions for students -->
-      <p>Subway: 4, 5, 6 to 86th St<br>Bus: M1, M2, M3, M4 to 82nd St</p>
+          <span class="info-label">Getting There</span>
+          <!-- EDIT: Transit directions for students -->
+          <p>Subway: 4, 5, 6 to 86th St<br />Bus: M1, M2, M3, M4 to 82nd St</p>
 
-      <span class="info-label">Borough</span>
-      <!-- EDIT: Borough name -->
-      <p>Manhattan</p>
+          <span class="info-label">Borough</span>
+          <!-- EDIT: Borough name -->
+          <p>Manhattan</p>
 
-      <div style="margin-top:1.5rem;">
-        <!-- EDIT: Update href to link to the borough page -->
-        <a href="../boroughs/manhattan.html" class="btn-primary" style="display:block;text-align:center;background:var(--blush);color:var(--brown);">← More in Manhattan</a>
+          <div style="margin-top: 1.5rem">
+            <!-- EDIT: Update href to link to the borough page -->
+            <a
+              href="../boroughs/manhattan.html"
+              class="btn-primary"
+              style="
+                display: block;
+                text-align: center;
+                background: var(--blush);
+                color: var(--brown);
+              "
+              >← More in Manhattan</a
+            >
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+    <!-- end .detail-body -->
 
-</div><!-- end .detail-body -->
+    <footer>
+      <strong>ArtReach</strong>
+      © 2026 ArtReach. Connecting NYC students with culture.
+    </footer>
 
-<footer>
-  <strong>ArtReach</strong>
-  © 2026 ArtReach. Connecting NYC students with culture.
-</footer>
-
-</body>
+    <script src="../script.js"></script>
+  </body>
 </html>

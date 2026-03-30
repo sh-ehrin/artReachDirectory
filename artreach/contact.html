@@ -1,124 +1,256 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — ArtReach</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — ArtReach</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-logo">Art<span>Reach</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">Field Trip Guide</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
 
-<nav>
-  <a href="index.html" class="nav-logo">Art<span>Reach</span></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="faq.html">Field Trip Guide</a></li>
-    <li><a href="contact.html" class="active">Contact</a></li>
-  </ul>
-</nav>
+    <section class="page-hero">
+      <p class="page-hero-eyebrow">Get in Touch</p>
+      <h1>Contact <em>ArtReach</em></h1>
+      <!-- EDIT: Contact page subtitle -->
+      <p>
+        Have a question, want to suggest a venue, or need help planning a trip?
+        We'd love to hear from you.
+      </p>
+    </section>
 
-<section class="page-hero">
-  <p class="page-hero-eyebrow">Get in Touch</p>
-  <h1>Contact <em>ArtReach</em></h1>
-  <!-- EDIT: Contact page subtitle -->
-  <p>Have a question, want to suggest a venue, or need help planning a trip? We'd love to hear from you.</p>
-</section>
-
-<section class="section" style="max-width:900px;margin:0 auto;">
-  <div class="contact-grid">
-
-    <!-- ── CONTACT FORM ── -->
-    <!-- NOTE: This is a static form — to make it actually send emails you'll need
+    <section class="section" style="max-width: 900px; margin: 0 auto">
+      <div class="contact-grid">
+        <!-- ── CONTACT FORM ── -->
+        <!-- NOTE: This is a static form — to make it actually send emails you'll need
          a service like Formspree (free), Netlify Forms, or EmailJS.
          With Formspree: change <form> to <form action="https://formspree.io/f/YOUR_ID" method="POST"> -->
-    <div>
-      <h2 style="font-family:var(--font-display);font-size:1.6rem;font-weight:400;color:var(--navy);margin-bottom:1.5rem;">Send a Message</h2>
-      <form onsubmit="handleSubmit(event)">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+        <div>
+          <h2
+            style="
+              font-family: var(--font-display);
+              font-size: 1.6rem;
+              font-weight: 400;
+              color: var(--navy);
+              margin-bottom: 1.5rem;
+            "
+          >
+            Send a Message
+          </h2>
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Jane Smith"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="jane@school.edu"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="school">School / Organization</label>
+              <!-- EDIT: Placeholder text -->
+              <input
+                type="text"
+                id="school"
+                name="school"
+                placeholder="NYC Public School #000"
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <!-- EDIT: Add/remove subject options as needed -->
+                <option value="">Select a topic...</option>
+                <option value="suggest">Suggest a Venue</option>
+                <option value="trip">Field Trip Help</option>
+                <option value="update">Update Venue Information</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us how we can help..."
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn-primary"
+              style="width: 100%; text-align: center"
+            >
+              Send Message
+            </button>
+            <p
+              id="form-confirm"
+              style="
+                display: none;
+                margin-top: 1rem;
+                color: var(--navy);
+                font-size: 0.85rem;
+                text-align: center;
+              "
+            >
+              Thanks! We'll be in touch soon.
+            </p>
+          </form>
         </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="jane@school.edu" required>
-        </div>
-        <div class="form-group">
-          <label for="school">School / Organization</label>
-          <!-- EDIT: Placeholder text -->
-          <input type="text" id="school" name="school" placeholder="NYC Public School #000">
-        </div>
-        <div class="form-group">
-          <label for="subject">Subject</label>
-          <select id="subject" name="subject">
-            <!-- EDIT: Add/remove subject options as needed -->
-            <option value="">Select a topic...</option>
-            <option value="suggest">Suggest a Venue</option>
-            <option value="trip">Field Trip Help</option>
-            <option value="update">Update Venue Information</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Tell us how we can help..." required></textarea>
-        </div>
-        <button type="submit" class="btn-primary" style="width:100%;text-align:center;">Send Message</button>
-        <p id="form-confirm" style="display:none;margin-top:1rem;color:var(--navy);font-size:.85rem;text-align:center;">
-          Thanks! We'll be in touch soon.
-        </p>
-      </form>
-    </div>
 
-    <!-- ── CONTACT INFO SIDEBAR ── -->
-    <div>
-      <h2 style="font-family:var(--font-display);font-size:1.6rem;font-weight:400;color:var(--navy);margin-bottom:1.5rem;">Other Ways to Reach Us</h2>
+        <!-- ── CONTACT INFO SIDEBAR ── -->
+        <div>
+          <h2
+            style="
+              font-family: var(--font-display);
+              font-size: 1.6rem;
+              font-weight: 400;
+              color: var(--navy);
+              margin-bottom: 1.5rem;
+            "
+          >
+            Other Ways to Reach Us
+          </h2>
 
-      <div style="background:var(--brown);border-radius:6px;padding:1.6rem;margin-bottom:1.2rem;">
-        <p style="font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blush);margin-bottom:.5rem;">Email</p>
-        <!-- EDIT: Contact email address -->
-        <p style="color:var(--sand);font-size:.92rem;">hello@artreachnyc.org</p>
+          <div
+            style="
+              background: var(--brown);
+              border-radius: 6px;
+              padding: 1.6rem;
+              margin-bottom: 1.2rem;
+            "
+          >
+            <p
+              style="
+                font-size: 0.65rem;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                color: var(--blush);
+                margin-bottom: 0.5rem;
+              "
+            >
+              Email
+            </p>
+            <!-- EDIT: Contact email address -->
+            <p style="color: var(--sand); font-size: 0.92rem">
+              hello@artreachnyc.org
+            </p>
+          </div>
+
+          <div
+            style="
+              background: var(--brown);
+              border-radius: 6px;
+              padding: 1.6rem;
+              margin-bottom: 1.2rem;
+            "
+          >
+            <p
+              style="
+                font-size: 0.65rem;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                color: var(--blush);
+                margin-bottom: 0.5rem;
+              "
+            >
+              Based In
+            </p>
+            <!-- EDIT: Location / office description -->
+            <p style="color: var(--sand); font-size: 0.92rem">
+              New York City, NY
+            </p>
+          </div>
+
+          <div
+            style="
+              background: var(--brown);
+              border-radius: 6px;
+              padding: 1.6rem;
+              margin-bottom: 1.2rem;
+            "
+          >
+            <p
+              style="
+                font-size: 0.65rem;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                color: var(--blush);
+                margin-bottom: 0.5rem;
+              "
+            >
+              Suggest a Venue
+            </p>
+            <!-- EDIT: Venue submission note -->
+            <p
+              style="color: var(--taupe); font-size: 0.85rem; line-height: 1.7"
+            >
+              Know a museum, theatre, or music hall that belongs in this
+              directory? Use the form and select "Suggest a Venue" — we review
+              all submissions.
+            </p>
+          </div>
+
+          <div
+            style="
+              background: var(--brown);
+              border-radius: 6px;
+              padding: 1.6rem;
+            "
+          >
+            <p
+              style="
+                font-size: 0.65rem;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                color: var(--blush);
+                margin-bottom: 0.5rem;
+              "
+            >
+              Response Time
+            </p>
+            <!-- EDIT: Response time expectation -->
+            <p
+              style="color: var(--taupe); font-size: 0.85rem; line-height: 1.7"
+            >
+              We typically respond within 2–3 business days.
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div style="background:var(--brown);border-radius:6px;padding:1.6rem;margin-bottom:1.2rem;">
-        <p style="font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blush);margin-bottom:.5rem;">Based In</p>
-        <!-- EDIT: Location / office description -->
-        <p style="color:var(--sand);font-size:.92rem;">New York City, NY</p>
-      </div>
+    <div style="padding: 2rem 0"></div>
 
-      <div style="background:var(--brown);border-radius:6px;padding:1.6rem;margin-bottom:1.2rem;">
-        <p style="font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blush);margin-bottom:.5rem;">Suggest a Venue</p>
-        <!-- EDIT: Venue submission note -->
-        <p style="color:var(--taupe);font-size:.85rem;line-height:1.7;">Know a museum, theatre, or music hall that belongs in this directory? Use the form and select "Suggest a Venue" — we review all submissions.</p>
-      </div>
+    <footer>
+      <strong>ArtReach</strong>
+      © 2026 ArtReach. Connecting NYC students with culture.
+    </footer>
 
-      <div style="background:var(--brown);border-radius:6px;padding:1.6rem;">
-        <p style="font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blush);margin-bottom:.5rem;">Response Time</p>
-        <!-- EDIT: Response time expectation -->
-        <p style="color:var(--taupe);font-size:.85rem;line-height:1.7;">We typically respond within 2–3 business days.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<div style="padding:2rem 0;"></div>
-
-<footer>
-  <strong>ArtReach</strong>
-  © 2026 ArtReach. Connecting NYC students with culture.
-</footer>
-
-<script>
-  // Static form handler — shows a confirmation message on submit.
-  // Replace with Formspree or similar for real email delivery.
-  function handleSubmit(e) {
-    e.preventDefault();
-    document.getElementById('form-confirm').style.display = 'block';
-    e.target.reset();
-  }
-</script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

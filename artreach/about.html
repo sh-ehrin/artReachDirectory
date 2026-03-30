@@ -1,180 +1,263 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — ArtReach</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>
-  /* About page extras */
-  .about-section-label {
-    font-size: .68rem; letter-spacing: .2em;
-    text-transform: uppercase; color: var(--blush);
-    margin-bottom: .5rem;
-  }
-  .schools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem; margin-top: 1.5rem;
-  }
-  .school-pill {
-    background: var(--brown); border-radius: 4px;
-    padding: .8rem 1rem; font-size: .82rem;
-    color: var(--taupe); line-height: 1.4;
-  }
-  .school-pill strong { display: block; color: var(--sand); font-weight: 400; }
-</style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — ArtReach</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* About page extras */
+      .about-section-label {
+        font-size: 0.68rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--blush);
+        margin-bottom: 0.5rem;
+      }
+      .schools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+      .school-pill {
+        background: var(--brown);
+        border-radius: 4px;
+        padding: 0.8rem 1rem;
+        font-size: 0.82rem;
+        color: var(--taupe);
+        line-height: 1.4;
+      }
+      .school-pill strong {
+        display: block;
+        color: var(--sand);
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-logo">Art<span>Reach</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="faq.html">Field Trip Guide</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-<nav>
-  <a href="index.html" class="nav-logo">Art<span>Reach</span></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html" class="active">About</a></li>
-    <li><a href="faq.html">Field Trip Guide</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+    <!-- ── PAGE HERO ── -->
+    <section class="page-hero">
+      <p class="page-hero-eyebrow">Our Story</p>
+      <!-- EDIT: About page headline -->
+      <h1>About <em>ArtReach</em></h1>
+      <!-- EDIT: One-sentence mission statement -->
+      <p>
+        We are dedicated to strengthening the connection between New York City
+        public high school students and the cultural institutions that make this
+        city extraordinary.
+      </p>
+    </section>
 
-<!-- ── PAGE HERO ── -->
-<section class="page-hero">
-  <p class="page-hero-eyebrow">Our Story</p>
-  <!-- EDIT: About page headline -->
-  <h1>About <em>ArtReach</em></h1>
-  <!-- EDIT: One-sentence mission statement -->
-  <p>We are dedicated to strengthening the connection between New York City public high school students and the cultural institutions that make this city extraordinary.</p>
-</section>
-
-<!-- ── ABOUT ROW 1: Mission (image slides in from right) ── -->
-<div class="about-row reveal" id="about-r1">
-  <div class="about-text">
-    <p class="about-section-label">Our Mission</p>
-    <!-- EDIT: Section heading -->
-    <h2>Bringing Students Closer to Culture</h2>
-    <!-- EDIT: Mission body text — 2-4 sentences -->
-    <p>
-      ArtReach was created to make the extraordinary cultural wealth of New York City accessible to every student, regardless of borough or background. We believe that a field trip to a museum, theatre, or music hall is more than a school activity — it is an introduction to a lifelong relationship with the arts.
-    </p>
-    <br>
-    <!-- EDIT: Additional paragraph if needed, or delete the <p> tag below -->
-    <p>
-      This directory is a practical, teacher-ready resource: every institution is organized by borough and type, with the information you need to plan a visit from start to finish.
-    </p>
-  </div>
-  <!-- TIP: Replace the emoji placeholder with an <img src="your-photo.jpg" alt="..."> inside the div -->
-  <div class="about-img-placeholder">🎨</div>
-</div>
-
-<!-- ── ABOUT ROW 2: Who is this for (image slides in from left) ── -->
-<div class="about-row flip reveal from-left" id="about-r2" style="background:var(--brown);">
-  <div class="about-text">
-    <p class="about-section-label">Who Is This For</p>
-    <!-- EDIT: Section heading -->
-    <h2 style="color:var(--sand);">Built for NYC Educators</h2>
-    <!-- EDIT: Who-is-this-for body text -->
-    <p style="color:var(--taupe);">
-      ArtReach is designed for New York City public high school teachers, department heads, and trip coordinators who want to incorporate cultural experiences into their curriculum without the administrative headache of searching across dozens of websites.
-    </p>
-    <br>
-    <!-- EDIT: Second paragraph or delete -->
-    <p style="color:var(--taupe);">
-      Whether you teach visual arts, music, English, or history — every institution in this directory offers programs relevant to your students.
-    </p>
-  </div>
-  <div class="about-img-placeholder" style="background:var(--navy);">🏫</div>
-</div>
-
-<!-- ── ABOUT ROW 3: Schools reached (image slides in from right) ── -->
-<div class="about-row reveal" id="about-r3" id="schools">
-  <div class="about-text">
-    <p class="about-section-label" id="schools">Schools Reached</p>
-    <!-- EDIT: Section heading -->
-    <h2>The Schools We Serve</h2>
-    <!-- EDIT: Intro sentence for the schools section -->
-    <p>ArtReach has supported field trip planning for schools across all five boroughs.</p>
-
-    <!-- EDIT: Add or remove school pills as needed. Copy the .school-pill block to add more. -->
-    <div class="schools-grid">
-      <div class="school-pill"><strong>School Name Here</strong>Borough, NY</div>
-      <div class="school-pill"><strong>School Name Here</strong>Borough, NY</div>
-      <div class="school-pill"><strong>School Name Here</strong>Borough, NY</div>
-      <div class="school-pill"><strong>School Name Here</strong>Borough, NY</div>
-      <div class="school-pill"><strong>School Name Here</strong>Borough, NY</div>
-      <div class="school-pill"><strong>School Name Here</strong>Borough, NY</div>
-      <!-- Add more: <div class="school-pill"><strong>School Name</strong>Borough, NY</div> -->
+    <!-- ── ABOUT ROW 1: Mission (image slides in from right) ── -->
+    <div class="about-row reveal" id="about-r1">
+      <div class="about-text">
+        <p class="about-section-label">Our Mission</p>
+        <!-- EDIT: Section heading -->
+        <h2>Bringing Students Closer to Culture</h2>
+        <!-- EDIT: Mission body text — 2-4 sentences -->
+        <p>
+          ArtReach was created to make the extraordinary cultural wealth of New
+          York City accessible to every student, regardless of borough or
+          background. We believe that a field trip to a museum, theatre, or
+          music hall is more than a school activity — it is an introduction to a
+          lifelong relationship with the arts.
+        </p>
+        <br />
+        <!-- EDIT: Additional paragraph if needed, or delete the <p> tag below -->
+        <p>
+          This directory is a practical, teacher-ready resource: every
+          institution is organized by borough and type, with the information you
+          need to plan a visit from start to finish.
+        </p>
+      </div>
+      <!-- TIP: Replace the emoji placeholder with an <img src="your-photo.jpg" alt="..."> inside the div -->
+      <div class="about-img-placeholder">🎨</div>
     </div>
-  </div>
-  <div class="about-img-placeholder">🗽</div>
-</div>
 
-<!-- ── EXPANDABLE CARDS ── -->
-<section class="section" style="background:var(--sand);max-width:860px;margin:0 auto;padding-top:2rem;">
-
-  <!-- Expandable card: How to use this manual -->
-  <div class="expand-card" id="card-manual">
-    <div class="expand-header" onclick="toggleExpand('card-manual')">
-      <span class="expand-title">How to Use This Directory</span>
-      <span class="expand-icon">+</span>
+    <!-- ── ABOUT ROW 2: Who is this for (image slides in from left) ── -->
+    <div
+      class="about-row flip reveal from-left"
+      id="about-r2"
+      style="background: var(--brown)"
+    >
+      <div class="about-text">
+        <p class="about-section-label">Who Is This For</p>
+        <!-- EDIT: Section heading -->
+        <h2 style="color: var(--sand)">Built for NYC Educators</h2>
+        <!-- EDIT: Who-is-this-for body text -->
+        <p style="color: var(--taupe)">
+          ArtReach is designed for New York City public high school teachers,
+          department heads, and trip coordinators who want to incorporate
+          cultural experiences into their curriculum without the administrative
+          headache of searching across dozens of websites.
+        </p>
+        <br />
+        <!-- EDIT: Second paragraph or delete -->
+        <p style="color: var(--taupe)">
+          Whether you teach visual arts, music, English, or history — every
+          institution in this directory offers programs relevant to your
+          students.
+        </p>
+      </div>
+      <div class="about-img-placeholder" style="background: var(--navy)">
+        🏫
+      </div>
     </div>
-    <div class="expand-body">
-      <!-- EDIT: "How to use" article content -->
-      <p>ArtReach is organized by borough, then by institution type: Museums, Theatres, and Music Halls. Start on the home page and click the type of institution you're looking for under your borough. Each card shows you the essential information at a glance.</p>
-      <br>
-      <p>Click on any venue card to open its full detail page, where you'll find the address, hours, website, phone number, and a description of what the institution offers for student groups.</p>
-      <br>
-      <p>Use the <a href="faq.html" style="color:var(--blush);">Field Trip Guide</a> to help with planning logistics once you've found your venue.</p>
+
+    <!-- ── ABOUT ROW 3: Schools reached (image slides in from right) ── -->
+    <div class="about-row reveal" id="about-r3" id="schools">
+      <div class="about-text">
+        <p class="about-section-label" id="schools">Schools Reached</p>
+        <!-- EDIT: Section heading -->
+        <h2>The Schools We Serve</h2>
+        <!-- EDIT: Intro sentence for the schools section -->
+        <p>
+          ArtReach has supported field trip planning for schools across all five
+          boroughs.
+        </p>
+
+        <!-- EDIT: Add or remove school pills as needed. Copy the .school-pill block to add more. -->
+        <div class="schools-grid">
+          <div class="school-pill">
+            <strong>School Name Here</strong>Borough, NY
+          </div>
+          <div class="school-pill">
+            <strong>School Name Here</strong>Borough, NY
+          </div>
+          <div class="school-pill">
+            <strong>School Name Here</strong>Borough, NY
+          </div>
+          <div class="school-pill">
+            <strong>School Name Here</strong>Borough, NY
+          </div>
+          <div class="school-pill">
+            <strong>School Name Here</strong>Borough, NY
+          </div>
+          <div class="school-pill">
+            <strong>School Name Here</strong>Borough, NY
+          </div>
+          <!-- Add more: <div class="school-pill"><strong>School Name</strong>Borough, NY</div> -->
+        </div>
+      </div>
+      <div class="about-img-placeholder">🗽</div>
     </div>
-  </div>
 
-  <!-- Expandable card: How to plan a field trip -->
-  <div class="expand-card" id="card-fieldtrip">
-    <div class="expand-header" onclick="toggleExpand('card-fieldtrip')">
-      <span class="expand-title">How to Plan a Field Trip</span>
-      <span class="expand-icon">+</span>
-    </div>
-    <div class="expand-body">
-      <!-- EDIT: Field trip planning article content -->
-      <p>Planning a successful field trip starts well before the day of the visit. Here is a general framework used by experienced NYC educators.</p>
-      <br>
-      <p><strong style="color:var(--navy);font-weight:500;">1. Choose your venue.</strong> Use this directory to find an institution that aligns with your curriculum. Check the hours and confirm they accept school groups.</p>
-      <br>
-      <p><strong style="color:var(--navy);font-weight:500;">2. Contact the education department.</strong> Most institutions have a dedicated school programs office. Call or email them early — some programs book out weeks in advance.</p>
-      <br>
-      <p><strong style="color:var(--navy);font-weight:500;">3. Submit your paperwork.</strong> Work with your school's trip coordinator to complete all required forms well in advance of the trip date.</p>
-      <br>
-      <p><strong style="color:var(--navy);font-weight:500;">4. Prepare your students.</strong> A pre-visit activity can dramatically improve engagement on the day of the trip.</p>
-      <br>
-      <p>See the full <a href="faq.html" style="color:var(--blush);">Field Trip Guide</a> for more detail on each step.</p>
-    </div>
-  </div>
+    <!-- ── EXPANDABLE CARDS ── -->
+    <section
+      class="section"
+      style="
+        background: var(--sand);
+        max-width: 860px;
+        margin: 0 auto;
+        padding-top: 2rem;
+      "
+    >
+      <!-- Expandable card: How to use this manual -->
+      <div class="expand-card" id="card-manual">
+        <div class="expand-header" onclick="toggleExpand('card-manual')">
+          <span class="expand-title">How to Use This Directory</span>
+          <span class="expand-icon">+</span>
+        </div>
+        <div class="expand-body">
+          <!-- EDIT: "How to use" article content -->
+          <p>
+            ArtReach is organized by borough, then by institution type: Museums,
+            Theatres, and Music Halls. Start on the home page and click the type
+            of institution you're looking for under your borough. Each card
+            shows you the essential information at a glance.
+          </p>
+          <br />
+          <p>
+            Click on any venue card to open its full detail page, where you'll
+            find the address, hours, website, phone number, and a description of
+            what the institution offers for student groups.
+          </p>
+          <br />
+          <p>
+            Use the
+            <a href="faq.html" style="color: var(--blush)">Field Trip Guide</a>
+            to help with planning logistics once you've found your venue.
+          </p>
+        </div>
+      </div>
 
-</section>
+      <!-- Expandable card: How to plan a field trip -->
+      <div class="expand-card" id="card-fieldtrip">
+        <div class="expand-header" onclick="toggleExpand('card-fieldtrip')">
+          <span class="expand-title">How to Plan a Field Trip</span>
+          <span class="expand-icon">+</span>
+        </div>
+        <div class="expand-body">
+          <!-- EDIT: Field trip planning article content -->
+          <p>
+            Planning a successful field trip starts well before the day of the
+            visit. Here is a general framework used by experienced NYC
+            educators.
+          </p>
+          <br />
+          <p>
+            <strong style="color: var(--navy); font-weight: 500"
+              >1. Choose your venue.</strong
+            >
+            Use this directory to find an institution that aligns with your
+            curriculum. Check the hours and confirm they accept school groups.
+          </p>
+          <br />
+          <p>
+            <strong style="color: var(--navy); font-weight: 500"
+              >2. Contact the education department.</strong
+            >
+            Most institutions have a dedicated school programs office. Call or
+            email them early — some programs book out weeks in advance.
+          </p>
+          <br />
+          <p>
+            <strong style="color: var(--navy); font-weight: 500"
+              >3. Submit your paperwork.</strong
+            >
+            Work with your school's trip coordinator to complete all required
+            forms well in advance of the trip date.
+          </p>
+          <br />
+          <p>
+            <strong style="color: var(--navy); font-weight: 500"
+              >4. Prepare your students.</strong
+            >
+            A pre-visit activity can dramatically improve engagement on the day
+            of the trip.
+          </p>
+          <br />
+          <p>
+            See the full
+            <a href="faq.html" style="color: var(--blush)">Field Trip Guide</a>
+            for more detail on each step.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<div style="padding:2rem 0;"></div>
+    <div style="padding: 2rem 0"></div>
 
-<footer>
-  <strong>ArtReach</strong>
-  © 2026 ArtReach. Connecting NYC students with culture.
-</footer>
+    <footer>
+      <strong>ArtReach</strong>
+      © 2026 ArtReach. Connecting NYC students with culture.
+    </footer>
 
-<script>
-  // Expand/collapse cards
-  function toggleExpand(id) {
-    const card = document.getElementById(id);
-    card.classList.toggle('open');
-  }
-
-  // Scroll reveal for about rows
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); }
-    });
-  }, { threshold: 0.15 });
-  reveals.forEach(el => observer.observe(el));
-</script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

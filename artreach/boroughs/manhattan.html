@@ -1,164 +1,1139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manhattan — ArtReach</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manhattan — ArtReach</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html" class="nav-logo">Art<span>Reach</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../faq.html">Field Trip Guide</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-<nav>
-  <a href="../index.html" class="nav-logo">Art<span>Reach</span></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../about.html">About</a></li>
-    <li><a href="../faq.html">Field Trip Guide</a></li>
-    <li><a href="../contact.html">Contact</a></li>
-  </ul>
-</nav>
+    <!-- ── PAGE HERO ── -->
+    <section class="page-hero">
+      <a href="../index.html" class="detail-back">← Back to All Boroughs</a>
+      <p class="page-hero-eyebrow">Browse by Institution Type</p>
+      <!-- EDIT (per borough file): Borough name in headline -->
+      <h1><em>Manhattan</em></h1>
+    </section>
 
-<!-- ── PAGE HERO ── -->
-<section class="page-hero">
-  <a href="../index.html" class="detail-back">← Back to All Boroughs</a>
-  <p class="page-hero-eyebrow">Browse by Institution Type</p>
-  <!-- EDIT (per borough file): Borough name in headline -->
-  <h1><em>Manhattan</em></h1>
-</section>
+    <!-- ── MAIN CONTENT ── -->
+    <section class="section">
+      <!-- TYPE FILTER TABS -->
+      <div class="type-tabs">
+        <button class="type-tab active" onclick="filterType('all', this)">
+          All
+        </button>
+        <button class="type-tab" onclick="filterType('museum', this)">
+          Museums
+        </button>
+        <button class="type-tab" onclick="filterType('theatre', this)">
+          Theatres
+        </button>
+        <button class="type-tab" onclick="filterType('music', this)">
+          Music Halls
+        </button>
+      </div>
 
-<!-- ── MAIN CONTENT ── -->
-<section class="section">
-
-  <!-- TYPE FILTER TABS -->
-  <div class="type-tabs">
-    <button class="type-tab active" onclick="filterType('all', this)">All</button>
-    <button class="type-tab" onclick="filterType('museum', this)">Museums</button>
-    <button class="type-tab" onclick="filterType('theatre', this)">Theatres</button>
-    <button class="type-tab" onclick="filterType('music', this)">Music Halls</button>
-  </div>
-
-  <!-- ── VENUE GRID ──
+      <!-- ── VENUE GRID ──
        HOW TO ADD A VENUE:
        1. Copy one complete <a class="venue-card"> block below
        2. Paste it inside the .venue-grid div
        3. Change data-type to "museum", "theatre", or "music"
-       4. Fill in all the <!-- EDIT --> fields
-       5. The card will automatically appear in the right filtered view
-  -->
-  <div class="venue-grid" id="venue-grid">
+       4. Fill in all the fields 
+       5. The card will automatically appear in the right filtered view-->
 
-    <!-- ═══════════════════════════════════════
+      <div class="venue-grid" id="venue-grid">
+        <!-- ═══════════════════════════════════════
          VENUE CARD TEMPLATE — copy this block to add a new venue
          Change data-type to: museum | theatre | music
          ═══════════════════════════════════════ -->
-    <a href="../venues/venue-template.html" class="venue-card" data-type="museum">
-      <div class="venue-card-body">
-        <!-- EDIT: Institution type label (Museum / Theatre / Music Hall) -->
-        <div class="venue-card-type">Museum</div>
-        <!-- EDIT: Venue name -->
-        <div class="venue-card-name">The Metropolitan Museum of Art</div>
-        <!-- EDIT: 1-2 sentence description of what makes this venue great for students -->
-        <div class="venue-card-desc">One of the world's largest and most comprehensive art museums, with collections spanning 5,000 years of culture from every corner of the globe.</div>
-        <div class="venue-card-meta">
-          <!-- EDIT: Street address -->
-          <span>📍 1000 Fifth Ave, New York, NY 10028</span>
-          <!-- EDIT: Hours (or "Hours vary — check website") -->
-          <span>🕐 Sun–Thu 10am–5pm, Fri–Sat 10am–9pm</span>
-          <!-- EDIT: Phone number -->
-          <span>📞 (212) 535-7710</span>
-          <!-- EDIT: Website URL — update the href AND the display text -->
-          <span>🌐 <a href="https://www.metmuseum.org" target="_blank" onclick="event.stopPropagation()" style="color:var(--blush);">metmuseum.org</a></span>
-        </div>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/carnegie-hall.jpg"
+            alt="Carnegie Hall"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">Carnegie Hall</div>
+            <div class="venue-card-desc">
+              World-renowned concert hall with the Link Up program, which brings
+              NYC students to perform alongside professional orchestras. Free
+              Student Insider Pass available for $10 individual tickets.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 57th St & 7th Ave, New York, NY 10019</span>
+              <span>📞 (212) 247-7800</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.carnegiehall.org/Education"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >carnegiehall.org/Education</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/david-geffen-hall.jpg"
+            alt="David Geffen Hall"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">
+              David Geffen Hall — NY Philharmonic
+            </div>
+            <div class="venue-card-desc">
+              Home of the New York Philharmonic. Free Open Rehearsals for
+              Schools available for grades 4–12; Young People's Concerts for
+              Schools also offered during the season.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 10 Lincoln Center Plaza, New York, NY 10023</span>
+              <span>📞 (212) 875-5656</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.nyphil.org/education/school-programs/"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >nyphil.org/education</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/jazz-lincoln-center.jpg"
+            alt="Jazz at Lincoln Center"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">Jazz at Lincoln Center</div>
+            <div class="venue-card-desc">
+              Premier jazz institution with free-tuition academies for middle
+              and high school students, the Essentially Ellington program for
+              school bands, and Jazz for Young People concerts.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 Broadway at 60th St, New York, NY 10019</span>
+              <span>📞 (212) 258-9877</span>
+              <span
+                >🌐
+                <a
+                  href="https://jazz.org/education"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >jazz.org/education</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/downtown-music-gallery.jpg"
+            alt="Downtown Music Gallery"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">Downtown Music Gallery</div>
+            <div class="venue-card-desc">
+              Celebrated independent record store hosting free weekly in-store
+              concerts specializing in experimental and contemporary music — a
+              unique low-barrier cultural experience.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 13 Monroe Street, New York, NY 10002</span>
+              <span>📞 (212) 473-0043</span>
+              <span
+                >🌐
+                <a
+                  href="https://downtownmusicgallery.com"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >downtownmusicgallery.com</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/aaron-davis-hall.jpg"
+            alt="Aaron Davis Hall"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">
+              Aaron Davis Hall — City College of NY
+            </div>
+            <div class="venue-card-desc">
+              University performance hall in Harlem featuring classical, jazz,
+              and community concerts, often free or low-cost for students and
+              community members.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 129 Convent Ave, New York, NY 10027</span>
+              <span>📞 (212) 650-6900</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.ccny.cuny.edu/theatre/aarondavis"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >ccny.cuny.edu</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/assembly-hall-hunter.jpg"
+            alt="Assembly Hall — Hunter College"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">Assembly Hall — Hunter College</div>
+            <div class="venue-card-desc">
+              College auditorium on the Upper East Side hosting lectures,
+              concerts, and student performances, frequently free and open to
+              the public.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 695 Park Ave, New York, NY 10065</span>
+              <span>📞 (212) 772-4000</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.hunter.cuny.edu"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >hunter.cuny.edu</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/92nd-street-y.jpg"
+            alt="92nd Street Y"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">92nd Street Y</div>
+            <div class="venue-card-desc">
+              Cultural and performance center on the Upper East Side presenting
+              concerts, talks, and youth-friendly events. Offers school outreach
+              programs — contact education department for group rates.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 1395 Lexington Ave, New York, NY 10128</span>
+              <span>📞 (212) 257-9022</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.92ny.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >92ny.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/baryshnikov-arts.jpg"
+            alt="Baryshnikov Arts Center"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">Baryshnikov Arts Center</div>
+            <div class="venue-card-desc">
+              Nonprofit multidisciplinary arts venue focusing on dance, music,
+              and experimental performance. Small, intimate setting — contact
+              directly for school group and community rates.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 450 W 37th St, New York, NY 10018</span>
+              <span>📞 (646) 731-3200</span>
+              <span
+                >🌐
+                <a
+                  href="https://baryshnikovarts.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >baryshnikovarts.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── LINCOLN CENTER THEATER ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Lincoln Center Theater</div>
+            <div class="venue-card-desc">
+              One of the country's leading nonprofit theater companies, home to
+              the Vivian Beaumont, Mitzi E. Newhouse, and Claire Tow theaters.
+              Offers $32 student rush tickets and curriculum-connected education
+              programs.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 150 W 65th St, New York, NY 10023</span>
+              <span>📞 (212) 501-3100</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.lct.org"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >lct.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── ROUNDABOUT THEATRE COMPANY ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Roundabout Theatre Company</div>
+            <div class="venue-card-desc">
+              One of NYC's most influential nonprofit theater companies,
+              operating five stages on and off Broadway. Their education
+              programs reach 15,000 students and 1,000+ teachers annually
+              through workshops, student matinees, and career training.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 231 W 39th St, Suite 1200, New York, NY 10018</span>
+              <span>📞 (212) 719-9393</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.roundabouttheatre.org"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >roundabouttheatre.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── MANHATTAN THEATRE CLUB ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Manhattan Theatre Club</div>
+            <div class="venue-card-desc">
+              Award-winning nonprofit producing new plays and musicals at the
+              Samuel J. Friedman Theatre and NYC City Center. Their education
+              program offers student matinees, in-class instruction, and teacher
+              training for NYC schools.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 311 W 43rd St, 8th Floor, New York, NY 10036</span>
+              <span>📞 (212) 399-3000</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.manhattantheatreclub.com"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >manhattantheatreclub.com</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── THE PUBLIC THEATER ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">The Public Theater</div>
+            <div class="venue-card-desc">
+              A landmark Off-Broadway institution committed to producing works
+              that reflect the breadth of American experience, with robust
+              education programs for NYC students including school matinees and
+              artist residencies.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 425 Lafayette St, New York, NY 10003</span>
+              <span>📞 (212) 539-8500</span>
+              <span
+                >🌐
+                <a
+                  href="https://publictheater.org"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >publictheater.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── EL REPERTORIO ESPAÑOL ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">El Repertorio Español</div>
+            <div class="venue-card-desc">
+              NYC's premier Spanish-language theater company, founded in 1968,
+              presenting Latin American and Spanish works with live simultaneous
+              English translation. Dedicated school matinees with free study
+              guides and post-show Q&amp;As — has served 750,000+ high school
+              students.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 138 E 27th St, New York, NY 10016</span>
+              <span>📞 (212) 225-9999</span>
+              <span
+                >🌐
+                <a
+                  href="https://repertorio.nyc"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >repertorio.nyc</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── DELACORTE THEATER ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Delacorte Theater</div>
+            <div class="venue-card-desc">
+              The open-air, 1,800-seat home of The Public Theater's free
+              Shakespeare in the Park — one of NYC's most beloved summer
+              traditions since 1962. Freshly renovated in 2025 with improved
+              accessibility. All tickets are free.
+            </div>
+            <div class="venue-card-meta">
+              <span
+                >📍 Central Park, mid-park at 80th St, New York, NY 10024</span
+              >
+              <span>📞 (212) 539-8750</span>
+              <span
+                >🌐
+                <a
+                  href="https://publictheater.org/shakespeare-in-the-park"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >publictheater.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── APOLLO THEATER ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Apollo Theater</div>
+            <div class="venue-card-desc">
+              Iconic Harlem venue central to Black music and performance
+              history. Offers School Day Live performances, K–12 workshops, and
+              classroom programs. Note: building tours paused for 2025–26
+              renovation; education programs still active.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 253 W 125th St, New York, NY 10027</span>
+              <span>📞 (212) 531-5300</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.apollotheater.org/education"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >apollotheater.org/education</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── MINETTA LANE THEATRE ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Minetta Lane Theatre</div>
+            <div class="venue-card-desc">
+              An intimate 391-seat Off-Broadway house tucked into a charming
+              Greenwich Village side street, now operated by Audible Theater.
+              Has hosted landmark productions since 1984 and is a frequent home
+              for filmed-for-audio theatrical recordings.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 18 Minetta Ln, New York, NY 10012</span>
+              <span>📞 (212) 420-8000</span>
+              <span
+                >🌐
+                <a
+                  href="https://audiblexminetta.com"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >audiblexminetta.com</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── PALACE THEATRE ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Palace Theatre</div>
+            <div class="venue-card-desc">
+              One of Broadway's most storied venues, opened in 1913 as the
+              country's premier vaudeville house. Now a 1,648-seat Broadway
+              theater at the north end of Times Square, hosting major musicals
+              and touring productions.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 1564 Broadway, New York, NY 10036</span>
+              <span>📞 (212) 730-8200</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.palacetheatre.net"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >palacetheatre.net</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── STEPHEN SONDHEIM THEATRE ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Stephen Sondheim Theatre</div>
+            <div class="venue-card-desc">
+              Broadway's only LEED-certified theater, opened in 2009 and named
+              for the legendary composer in 2010. A 1,055-seat underground house
+              at the base of the Bank of America Tower, operated by Roundabout
+              Theatre Company.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 124 W 43rd St, New York, NY 10036</span>
+              <span>📞 (212) 719-1300</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.roundabouttheatre.org/theatres-and-venues/stephen-sondheim-theatre"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >roundabouttheatre.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── AL HIRSCHFELD THEATRE ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Al Hirschfeld Theatre</div>
+            <div class="venue-card-desc">
+              A stunning 1,424-seat Broadway house designed in Byzantine style,
+              opened in 1924 and renamed in 2003 to honor legendary theater
+              illustrator Al Hirschfeld. Home to landmark productions including
+              Into the Woods, Kinky Boots, and Moulin Rouge!
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 302 W 45th St, New York, NY 10036</span>
+              <span>📞 (212) 239-6200</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.alhirschfeldbroadway.com"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >alhirschfeldbroadway.com</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">The Metropolitan Museum of Art</div>
+            <div class="venue-card-desc">
+              One of the world's greatest museums, spanning 5,000 years of art
+              across every culture and continent. Free for NY, NJ, and CT
+              students with a valid school ID — no reservation required for
+              individual visits. School group programs also available through
+              the education department.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 1000 Fifth Avenue, New York, NY 10028</span>
+              <span>📞 (212) 535-7710</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.metmuseum.org/learn/schools"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >metmuseum.org/learn/schools</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Whitney Museum of American Art</div>
+            <div class="venue-card-desc">
+              Premier museum of 20th and 21st-century American art, with an
+              emphasis on living artists. Always free for visitors 25 and under
+              — just show up. Located at the edge of the High Line in the
+              Meatpacking District, with stunning Hudson River views from its
+              terraces.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 99 Gansevoort Street, New York, NY 10014</span>
+              <span>📞 (212) 570-3600</span>
+              <span
+                >🌐
+                <a
+                  href="https://whitney.org/education/youth-and-teens"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >whitney.org/education</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">
+              Cooper Hewitt, Smithsonian Design Museum
+            </div>
+            <div class="venue-card-desc">
+              The only museum in the US dedicated entirely to historic and
+              contemporary design. Housed in the landmark Carnegie Mansion on
+              Museum Mile, it offers free school group visits as a Smithsonian
+              institution, with hands-on design workshops and
+              curriculum-connected programming.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 2 East 91st Street, New York, NY 10128</span>
+              <span>📞 (212) 849-8400</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.cooperhewitt.org/visit/school-groups"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >cooperhewitt.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">El Museo del Barrio</div>
+            <div class="venue-card-desc">
+              New York's leading Latino cultural institution, celebrating the
+              art and culture of Latin America, the Caribbean, and US Latino
+              communities. Admission is always pay-what-you-wish, with free and
+              subsidized school programs serving East Harlem and beyond.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 1230 Fifth Avenue, New York, NY 10029</span>
+              <span>📞 (212) 831-7272</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.elmuseo.org/education"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >elmuseo.org/education</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">American Folk Art Museum</div>
+            <div class="venue-card-desc">
+              Always-free museum dedicated to self-taught and folk artists
+              across four centuries, located steps from Lincoln Center. Presents
+              rotating exhibitions, live music, film screenings, and talks — a
+              distinctive and often overlooked gem for students exploring art
+              outside the mainstream.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 2 Lincoln Square, New York, NY 10023</span>
+              <span>📞 (212) 595-9533</span>
+              <span
+                >🌐
+                <a
+                  href="https://folkartmuseum.org/education"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >folkartmuseum.org/education</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Museum of Modern Art (MoMA)</div>
+            <div class="venue-card-desc">
+              One of the world's foremost modern art museums, spanning 19th–21st
+              century painting, sculpture, photography, film, and design. Free
+              for visitors 16 and under — no ID required. School group programs
+              and educator resources available through MoMA's education
+              department.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 11 West 53rd Street, New York, NY 10019</span>
+              <span>📞 (212) 708-9400</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.moma.org/learn/educators"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >moma.org/learn/educators</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Solomon R. Guggenheim Museum</div>
+            <div class="venue-card-desc">
+              Iconic Frank Lloyd Wright–designed landmark housing Impressionist,
+              Post-Impressionist, and contemporary art. Offers free guided
+              school tours for NYC public Title I schools — contact the
+              education department to book. One of the most architecturally
+              distinctive museum experiences in the world.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 1071 Fifth Avenue, New York, NY 10128</span>
+              <span>📞 (212) 423-3500</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.guggenheim.org/education/school-educator-programs"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >guggenheim.org/education</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">The Frick Collection</div>
+            <div class="venue-card-desc">
+              Intimate museum of European old master paintings and decorative
+              arts housed in a stunning Gilded Age mansion on the Upper East
+              Side. Free for NYC public school groups — an extraordinary
+              opportunity to see Vermeer, Rembrandt, and El Greco in a setting
+              unlike any other museum in the city.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 1 East 70th Street, New York, NY 10021</span>
+              <span>📞 (212) 288-0700</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.frick.org/education/schools"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >frick.org/education/schools</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Morgan Library & Museum</div>
+            <div class="venue-card-desc">
+              Extraordinary collection of rare manuscripts, illuminated books,
+              prints, drawings, and art spanning antiquity to the modern era —
+              all housed in J.P. Morgan's original Midtown library. Free for NYC
+              public school groups, with curriculum-aligned programs in
+              literature, history, and visual arts.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 225 Madison Avenue, New York, NY 10016</span>
+              <span>📞 (212) 685-0008</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.themorgan.org/education/school-programs"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >themorgan.org/education</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ADD MORE VENUE CARDS HERE — copy any card block above and edit the fields -->
       </div>
-    </a>
+      <!-- end .venue-grid -->
 
-    <!-- ─── EXAMPLE THEATRE CARD ─── -->
-    <a href="../venues/venue-template.html" class="venue-card" data-type="theatre">
-      <div class="venue-card-body">
-        <div class="venue-card-type">Theatre</div>
-        <div class="venue-card-name">The Public Theater</div>
-        <div class="venue-card-desc">A landmark Off-Broadway institution committed to producing works that reflect the breadth of American experience, with robust education programs for NYC students.</div>
-        <div class="venue-card-meta">
-          <span>📍 425 Lafayette St, New York, NY 10003</span>
-          <span>🕐 Box office hours vary by production</span>
-          <span>📞 (212) 539-8500</span>
-          <span>🌐 <a href="https://publictheater.org" target="_blank" onclick="event.stopPropagation()" style="color:var(--blush);">publictheater.org</a></span>
-        </div>
+      <!-- Empty state (shown when a filter has no results) -->
+      <div
+        id="empty-state"
+        style="
+          display: none;
+          text-align: center;
+          padding: 4rem 0;
+          color: var(--taupe);
+        "
+      >
+        <div style="font-size: 2.5rem; margin-bottom: 1rem">🏛</div>
+        <p
+          style="
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--navy);
+          "
+        >
+          No venues yet in this category.
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.88rem">
+          Check back soon, or
+          <a href="../contact.html" style="color: var(--blush)">suggest one</a>.
+        </p>
       </div>
-    </a>
+    </section>
 
-    <!-- ─── EXAMPLE MUSIC HALL CARD ─── -->
-    <a href="../venues/venue-template.html" class="venue-card" data-type="music">
-      <div class="venue-card-body">
-        <div class="venue-card-type">Music Hall</div>
-        <div class="venue-card-name">Carnegie Hall</div>
-        <div class="venue-card-desc">One of the most prestigious concert venues in the world, Carnegie Hall offers extensive education and student programs throughout the season.</div>
-        <div class="venue-card-meta">
-          <span>📍 881 Seventh Ave, New York, NY 10019</span>
-          <span>🕐 Box office Mon–Sat 11am–6pm</span>
-          <span>📞 (212) 247-7800</span>
-          <span>🌐 <a href="https://www.carnegiehall.org" target="_blank" onclick="event.stopPropagation()" style="color:var(--blush);">carnegiehall.org</a></span>
-        </div>
-      </div>
-    </a>
+    <footer>
+      <strong>ArtReach</strong>
+      © 2026 ArtReach. Connecting NYC students with culture.
+    </footer>
 
-    <!-- ADD MORE VENUE CARDS HERE — copy any card block above and edit the fields -->
-
-  </div><!-- end .venue-grid -->
-
-  <!-- Empty state (shown when a filter has no results) -->
-  <div id="empty-state" style="display:none;text-align:center;padding:4rem 0;color:var(--taupe);">
-    <div style="font-size:2.5rem;margin-bottom:1rem;">🏛</div>
-    <p style="font-family:var(--font-display);font-size:1.4rem;color:var(--navy);">No venues yet in this category.</p>
-    <p style="margin-top:.5rem;font-size:.88rem;">Check back soon, or <a href="../contact.html" style="color:var(--blush);">suggest one</a>.</p>
-  </div>
-
-</section>
-
-<footer>
-  <strong>ArtReach</strong>
-  © 2026 ArtReach. Connecting NYC students with culture.
-</footer>
-
-<script>
-  // Read ?type= from URL and pre-select the matching tab on load
-  function getUrlType() {
-    const params = new URLSearchParams(window.location.search);
-    const t = params.get('type');
-    if (t === 'museums') return 'museum';
-    if (t === 'theatres') return 'theatre';
-    if (t === 'music') return 'music';
-    return 'all';
-  }
-
-  function filterType(type, btn) {
-    // Update active tab
-    document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('active'));
-    if (btn) btn.classList.add('active');
-
-    // Show/hide cards
-    const cards = document.querySelectorAll('.venue-card');
-    let visible = 0;
-    cards.forEach(card => {
-      const match = type === 'all' || card.dataset.type === type;
-      card.style.display = match ? 'block' : 'none';
-      if (match) visible++;
-    });
-
-    document.getElementById('empty-state').style.display = visible === 0 ? 'block' : 'none';
-  }
-
-  // Apply URL param filter on load
-  window.addEventListener('DOMContentLoaded', () => {
-    const type = getUrlType();
-    if (type !== 'all') {
-      const tabMap = { museum: 1, theatre: 2, music: 3 };
-      const tabs = document.querySelectorAll('.type-tab');
-      filterType(type, tabs[tabMap[type]]);
-    }
-  });
-</script>
-
-</body>
+    <script src="../script.js"></script>
+  </body>
 </html>

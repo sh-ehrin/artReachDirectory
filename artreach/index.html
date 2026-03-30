@@ -1,260 +1,308 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ArtReach — NYC Cultural Directory</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArtReach — NYC Cultural Directory</title>
+    
+    <link rel="icon" href="https://www.flaticon.com/free-icon/painting-palette_3371778" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ── NAVBAR ── -->
+    <nav>
+      <a href="index.html" class="nav-logo">Art<span>Reach</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">Field Trip Guide</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-<!-- ── NAVBAR ── -->
-<nav>
-  <a href="index.html" class="nav-logo">Art<span>Reach</span></a>
-  <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="faq.html">Field Trip Guide</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- ── HERO ── -->
-<!-- TIP: To use a background image instead of navy, replace the <section class="hero"> style with:
+    <!-- ── HERO ── -->
+    <!-- TIP: To use a background image instead of navy, replace the <section class="hero"> style with:
      background: linear-gradient(rgba(25,62,84,.7), rgba(3,2,2,.5)), url('your-image.jpg') center/cover no-repeat; -->
-<section class="hero">
-  <p class="hero-eyebrow">New York City's Cultural Directory</p>
-  <!-- EDIT: Main headline -->
-  <h1>Discover the Art<br><em>Around You</em></h1>
-  <!-- EDIT: Hero subtext -->
-  <p>A curated guide to museums, theatres, and music halls across all five boroughs — built for New York City educators and students.</p>
-  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-    <a href="#browse" class="btn-primary">Browse Institutions</a>
-    <a href="about.html" class="btn-outline">About ArtReach</a>
-  </div>
-</section>
+    <section class="hero">
+      <p class="hero-eyebrow">New York City's Cultural Directory</p>
+      <!-- EDIT: Main headline -->
+      <h1>Discover the Art<br /><em>Around You</em></h1>
+      <!-- EDIT: Hero subtext -->
+      <p>
+        A curated guide to museums, theatres, and music halls across all five
+        boroughs — built for New York City educators and students.
+      </p>
+      <div
+        style="
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          flex-wrap: wrap;
+        "
+      >
+        <a href="#browse" class="btn-primary">Browse Institutions</a>
+        <a href="about.html" class="btn-outline">About ArtReach</a>
+      </div>
+    </section>
 
-<!-- ── THREE FEATURE BUTTONS ── -->
-<div class="feature-btns">
-  <a href="about.html" class="feature-btn">
-    <span class="feature-btn-icon">🏛</span>
-    <div class="feature-btn-label">About ArtReach</div>
-    <!-- EDIT: Short tagline for this button -->
-    <div class="feature-btn-sub">Our mission and who we serve</div>
-  </a>
-  <a href="about.html#why-arts" class="feature-btn">
-    <span class="feature-btn-icon">🎨</span>
-    <div class="feature-btn-label">Why the Arts</div>
-    <!-- EDIT: Short tagline for this button -->
-    <div class="feature-btn-sub">The case for arts education in NYC schools</div>
-  </a>
-  <a href="about.html#schools" class="feature-btn">
-    <span class="feature-btn-icon">🏫</span>
-    <div class="feature-btn-label">Schools Reached</div>
-    <!-- EDIT: Short tagline for this button -->
-    <div class="feature-btn-sub">Communities we've connected with culture</div>
-  </a>
-</div>
-
-<!-- ── BROWSE BY BOROUGH ── -->
-<div id="browse">
-
-  <!-- ══ MANHATTAN ══ -->
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Manhattan</h2>
-      <a href="boroughs/manhattan.html" class="section-link">View all →</a>
+    <!-- ── THREE FEATURE BUTTONS ── -->
+    <div class="feature-btns">
+      <a href="about.html" class="feature-btn">
+        <span class="feature-btn-icon">🏛</span>
+        <div class="feature-btn-label">About ArtReach</div>
+        <!-- EDIT: Short tagline for this button -->
+        <div class="feature-btn-sub">Our mission and who we serve</div>
+      </a>
+      <a href="about.html#why-arts" class="feature-btn">
+        <span class="feature-btn-icon">🎨</span>
+        <div class="feature-btn-label">Why the Arts</div>
+        <!-- EDIT: Short tagline for this button -->
+        <div class="feature-btn-sub">
+          The case for arts education in NYC schools
+        </div>
+      </a>
+      <a href="about.html#schools" class="feature-btn">
+        <span class="feature-btn-icon">🏫</span>
+        <div class="feature-btn-label">Schools Reached</div>
+        <!-- EDIT: Short tagline for this button -->
+        <div class="feature-btn-sub">
+          Communities we've connected with culture
+        </div>
+      </a>
     </div>
-    <div class="carousel-wrap">
-      <div class="carousel-track" id="track-manhattan">
 
-        <!-- BOROUGH CARD: Museums — links to the filtered borough page -->
-        <a href="boroughs/manhattan.html?type=museums" class="borough-card">
-          <div class="ph">🏛</div>
-          <div class="card-overlay">
-            <span class="card-tag">Explore</span>
-            <div class="card-name">Museums</div>
-            <div class="card-sub">Manhattan</div>
+    <!-- ── BROWSE BY BOROUGH ── -->
+    <div id="browse">
+      <!-- ══ MANHATTAN ══ -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Manhattan</h2>
+          <a href="boroughs/manhattan.html" class="section-link">View all →</a>
+        </div>
+        <div class="carousel-wrap">
+          <div class="carousel-track" id="track-manhattan">
+            <!-- BOROUGH CARD: Museums — links to the filtered borough page -->
+            <a href="boroughs/manhattan.html?type=museums" class="borough-card">
+              <div class="ph">🏛</div>
+              <div class="card-overlay">
+                <span class="card-tag">Explore</span>
+                <div class="card-name">Museums</div>
+                <div class="card-sub">Manhattan</div>
+              </div>
+            </a>
+
+            <a
+              href="boroughs/manhattan.html?type=theatres"
+              class="borough-card"
+            >
+              <div class="ph">🎭</div>
+              <div class="card-overlay">
+                <span class="card-tag">Explore</span>
+                <div class="card-name">Theatres</div>
+                <div class="card-sub">Manhattan</div>
+              </div>
+            </a>
+
+            <a href="boroughs/manhattan.html?type=music" class="borough-card">
+              <div class="ph">🎶</div>
+              <div class="card-overlay">
+                <span class="card-tag">Explore</span>
+                <div class="card-name">Music Halls</div>
+                <div class="card-sub">Manhattan</div>
+              </div>
+            </a>
           </div>
-        </a>
+        </div>
+        <div class="carousel-controls">
+          <button class="ctrl" onclick="slide('manhattan', -1)">&#8592;</button>
+          <button class="ctrl" onclick="slide('manhattan', 1)">&#8594;</button>
+        </div>
+      </section>
 
-        <a href="boroughs/manhattan.html?type=theatres" class="borough-card">
-          <div class="ph">🎭</div>
-          <div class="card-overlay">
-            <span class="card-tag">Explore</span>
-            <div class="card-name">Theatres</div>
-            <div class="card-sub">Manhattan</div>
+      <!-- ══ BROOKLYN ══ -->
+      <section class="section alt">
+        <div class="section-header">
+          <h2 class="section-title">Brooklyn</h2>
+          <a href="boroughs/brooklyn.html" class="section-link">View all →</a>
+        </div>
+        <div class="carousel-wrap">
+          <div class="carousel-track" id="track-brooklyn">
+            <a href="boroughs/brooklyn.html?type=museums" class="borough-card">
+              <div class="ph">🏛</div>
+              <div class="card-overlay">
+                <span class="card-tag">Explore</span>
+                <div class="card-name">Museums</div>
+                <div class="card-sub">Brooklyn</div>
+              </div>
+            </a>
+            <a href="boroughs/brooklyn.html?type=theatres" class="borough-card">
+              <div class="ph">🎭</div>
+              <div class="card-overlay">
+                <span class="card-tag">Explore</span>
+                <div class="card-name">Theatres</div>
+                <div class="card-sub">Brooklyn</div>
+              </div>
+            </a>
+            <a href="boroughs/brooklyn.html?type=music" class="borough-card">
+              <div class="ph">🎶</div>
+              <div class="card-overlay">
+                <span class="card-tag">Explore</span>
+                <div class="card-name">Music Halls</div>
+                <div class="card-sub">Brooklyn</div>
+              </div>
+            </a>
           </div>
-        </a>
+        </div>
+        <div class="carousel-controls">
+          <button class="ctrl" onclick="slide('brooklyn', -1)">&#8592;</button>
+          <button class="ctrl" onclick="slide('brooklyn', 1)">&#8594;</button>
+        </div>
+      </section>
 
-        <a href="boroughs/manhattan.html?type=music" class="borough-card">
-          <div class="ph">🎶</div>
-          <div class="card-overlay">
-            <span class="card-tag">Explore</span>
-            <div class="card-name">Music Halls</div>
-            <div class="card-sub">Manhattan</div>
+      <!-- ══ QUEENS ══ -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Queens</h2>
+          <a href="boroughs/queens.html" class="section-link">View all →</a>
+        </div>
+        <div class="carousel-wrap">
+          <div class="carousel-track" id="track-queens">
+            <a href="boroughs/queens.html?type=museums" class="borough-card">
+              <div class="ph">🏛</div>
+              <div class="card-overlay">
+                <span class="card-tag">Explore</span>
+                <div class="card-name">Museums</div>
+                <div class="card-sub">Queens</div>
+              </div>
+            </a>
+            <a href="boroughs/queens.html?type=theatres" class="borough-card">
+              <div class="ph">🎭</div>
+              <div class="card-overlay">
+                <span class="card-tag">Explore</span>
+                <div class="card-name">Theatres</div>
+                <div class="card-sub">Queens</div>
+              </div>
+            </a>
+            <a href="boroughs/queens.html?type=music" class="borough-card">
+              <div class="ph">🎶</div>
+              <div class="card-overlay">
+                <span class="card-tag">Explore</span>
+                <div class="card-name">Music Halls</div>
+                <div class="card-sub">Queens</div>
+              </div>
+            </a>
           </div>
-        </a>
+        </div>
+        <div class="carousel-controls">
+          <button class="ctrl" onclick="slide('queens', -1)">&#8592;</button>
+          <button class="ctrl" onclick="slide('queens', 1)">&#8594;</button>
+        </div>
+      </section>
 
-      </div>
-    </div>
-    <div class="carousel-controls">
-      <button class="ctrl" onclick="slide('manhattan',-1)">&#8592;</button>
-      <button class="ctrl" onclick="slide('manhattan',1)">&#8594;</button>
-    </div>
-  </section>
+      <!-- ══ THE BRONX ══ -->
+      <section class="section alt">
+        <div class="section-header">
+          <h2 class="section-title">The Bronx</h2>
+          <a href="boroughs/bronx.html" class="section-link">View all →</a>
+        </div>
+        <div class="carousel-wrap">
+          <div class="carousel-track" id="track-bronx">
+            <a href="boroughs/bronx.html?type=museums" class="borough-card">
+              <div class="ph">🏛</div>
+              <div class="card-overlay">
+                <span class="card-tag">Explore</span>
+                <div class="card-name">Museums</div>
+                <div class="card-sub">The Bronx</div>
+              </div>
+            </a>
+            <a href="boroughs/bronx.html?type=theatres" class="borough-card">
+              <div class="ph">🎭</div>
+              <div class="card-overlay">
+                <span class="card-tag">Explore</span>
+                <div class="card-name">Theatres</div>
+                <div class="card-sub">The Bronx</div>
+              </div>
+            </a>
+            <a href="boroughs/bronx.html?type=music" class="borough-card">
+              <div class="ph">🎶</div>
+              <div class="card-overlay">
+                <span class="card-tag">Explore</span>
+                <div class="card-name">Music Halls</div>
+                <div class="card-sub">The Bronx</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="ctrl" onclick="slide('bronx', -1)">&#8592;</button>
+          <button class="ctrl" onclick="slide('bronx', 1)">&#8594;</button>
+        </div>
+      </section>
 
-  <!-- ══ BROOKLYN ══ -->
-  <section class="section alt">
-    <div class="section-header">
-      <h2 class="section-title">Brooklyn</h2>
-      <a href="boroughs/brooklyn.html" class="section-link">View all →</a>
+      <!-- ══ STATEN ISLAND ══ -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Staten Island</h2>
+          <a href="boroughs/staten-island.html" class="section-link"
+            >View all →</a
+          >
+        </div>
+        <div class="carousel-wrap">
+          <div class="carousel-track" id="track-staten">
+            <a
+              href="boroughs/staten-island.html?type=museums"
+              class="borough-card"
+            >
+              <div class="ph">🏛</div>
+              <div class="card-overlay">
+                <span class="card-tag">Explore</span>
+                <div class="card-name">Museums</div>
+                <div class="card-sub">Staten Island</div>
+              </div>
+            </a>
+            <a
+              href="boroughs/staten-island.html?type=theatres"
+              class="borough-card"
+            >
+              <div class="ph">🎭</div>
+              <div class="card-overlay">
+                <span class="card-tag">Explore</span>
+                <div class="card-name">Theatres</div>
+                <div class="card-sub">Staten Island</div>
+              </div>
+            </a>
+            <a
+              href="boroughs/staten-island.html?type=music"
+              class="borough-card"
+            >
+              <div class="ph">🎶</div>
+              <div class="card-overlay">
+                <span class="card-tag">Explore</span>
+                <div class="card-name">Music Halls</div>
+                <div class="card-sub">Staten Island</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="ctrl" onclick="slide('staten', -1)">&#8592;</button>
+          <button class="ctrl" onclick="slide('staten', 1)">&#8594;</button>
+        </div>
+      </section>
     </div>
-    <div class="carousel-wrap">
-      <div class="carousel-track" id="track-brooklyn">
-        <a href="boroughs/brooklyn.html?type=museums" class="borough-card">
-          <div class="ph">🏛</div>
-          <div class="card-overlay"><span class="card-tag">Explore</span><div class="card-name">Museums</div><div class="card-sub">Brooklyn</div></div>
-        </a>
-        <a href="boroughs/brooklyn.html?type=theatres" class="borough-card">
-          <div class="ph">🎭</div>
-          <div class="card-overlay"><span class="card-tag">Explore</span><div class="card-name">Theatres</div><div class="card-sub">Brooklyn</div></div>
-        </a>
-        <a href="boroughs/brooklyn.html?type=music" class="borough-card">
-          <div class="ph">🎶</div>
-          <div class="card-overlay"><span class="card-tag">Explore</span><div class="card-name">Music Halls</div><div class="card-sub">Brooklyn</div></div>
-        </a>
-      </div>
-    </div>
-    <div class="carousel-controls">
-      <button class="ctrl" onclick="slide('brooklyn',-1)">&#8592;</button>
-      <button class="ctrl" onclick="slide('brooklyn',1)">&#8594;</button>
-    </div>
-  </section>
+    <!-- end #browse -->
 
-  <!-- ══ QUEENS ══ -->
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Queens</h2>
-      <a href="boroughs/queens.html" class="section-link">View all →</a>
-    </div>
-    <div class="carousel-wrap">
-      <div class="carousel-track" id="track-queens">
-        <a href="boroughs/queens.html?type=museums" class="borough-card">
-          <div class="ph">🏛</div>
-          <div class="card-overlay"><span class="card-tag">Explore</span><div class="card-name">Museums</div><div class="card-sub">Queens</div></div>
-        </a>
-        <a href="boroughs/queens.html?type=theatres" class="borough-card">
-          <div class="ph">🎭</div>
-          <div class="card-overlay"><span class="card-tag">Explore</span><div class="card-name">Theatres</div><div class="card-sub">Queens</div></div>
-        </a>
-        <a href="boroughs/queens.html?type=music" class="borough-card">
-          <div class="ph">🎶</div>
-          <div class="card-overlay"><span class="card-tag">Explore</span><div class="card-name">Music Halls</div><div class="card-sub">Queens</div></div>
-        </a>
-      </div>
-    </div>
-    <div class="carousel-controls">
-      <button class="ctrl" onclick="slide('queens',-1)">&#8592;</button>
-      <button class="ctrl" onclick="slide('queens',1)">&#8594;</button>
-    </div>
-  </section>
+    <!-- ── FOOTER ── -->
+    <footer>
+      <strong>ArtReach</strong>
+      <!-- EDIT: Footer tagline/copyright -->
+      © 2026 ArtReach. Connecting NYC students with culture.
+    </footer>
 
-  <!-- ══ THE BRONX ══ -->
-  <section class="section alt">
-    <div class="section-header">
-      <h2 class="section-title">The Bronx</h2>
-      <a href="boroughs/bronx.html" class="section-link">View all →</a>
-    </div>
-    <div class="carousel-wrap">
-      <div class="carousel-track" id="track-bronx">
-        <a href="boroughs/bronx.html?type=museums" class="borough-card">
-          <div class="ph">🏛</div>
-          <div class="card-overlay"><span class="card-tag">Explore</span><div class="card-name">Museums</div><div class="card-sub">The Bronx</div></div>
-        </a>
-        <a href="boroughs/bronx.html?type=theatres" class="borough-card">
-          <div class="ph">🎭</div>
-          <div class="card-overlay"><span class="card-tag">Explore</span><div class="card-name">Theatres</div><div class="card-sub">The Bronx</div></div>
-        </a>
-        <a href="boroughs/bronx.html?type=music" class="borough-card">
-          <div class="ph">🎶</div>
-          <div class="card-overlay"><span class="card-tag">Explore</span><div class="card-name">Music Halls</div><div class="card-sub">The Bronx</div></div>
-        </a>
-      </div>
-    </div>
-    <div class="carousel-controls">
-      <button class="ctrl" onclick="slide('bronx',-1)">&#8592;</button>
-      <button class="ctrl" onclick="slide('bronx',1)">&#8594;</button>
-    </div>
-  </section>
-
-  <!-- ══ STATEN ISLAND ══ -->
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Staten Island</h2>
-      <a href="boroughs/staten-island.html" class="section-link">View all →</a>
-    </div>
-    <div class="carousel-wrap">
-      <div class="carousel-track" id="track-staten">
-        <a href="boroughs/staten-island.html?type=museums" class="borough-card">
-          <div class="ph">🏛</div>
-          <div class="card-overlay"><span class="card-tag">Explore</span><div class="card-name">Museums</div><div class="card-sub">Staten Island</div></div>
-        </a>
-        <a href="boroughs/staten-island.html?type=theatres" class="borough-card">
-          <div class="ph">🎭</div>
-          <div class="card-overlay"><span class="card-tag">Explore</span><div class="card-name">Theatres</div><div class="card-sub">Staten Island</div></div>
-        </a>
-        <a href="boroughs/staten-island.html?type=music" class="borough-card">
-          <div class="ph">🎶</div>
-          <div class="card-overlay"><span class="card-tag">Explore</span><div class="card-name">Music Halls</div><div class="card-sub">Staten Island</div></div>
-        </a>
-      </div>
-    </div>
-    <div class="carousel-controls">
-      <button class="ctrl" onclick="slide('staten',-1)">&#8592;</button>
-      <button class="ctrl" onclick="slide('staten',1)">&#8594;</button>
-    </div>
-  </section>
-
-</div><!-- end #browse -->
-
-<!-- ── FOOTER ── -->
-<footer>
-  <strong>ArtReach</strong>
-  <!-- EDIT: Footer tagline/copyright -->
-  © 2026 ArtReach. Connecting NYC students with culture.
-</footer>
-
-<script>
-  const state = {};
-  function slide(id, dir) {
-    const track = document.getElementById('track-' + id);
-    if (!track) return;
-    const cards = track.children;
-    const total = cards.length;
-    if (!state[id]) state[id] = 0;
-    const max = total - 3;
-    state[id] = Math.max(0, Math.min(state[id] + dir, Math.max(0, max)));
-    const cardW = cards[0].offsetWidth + 20;
-    track.style.transform = `translateX(-${state[id] * cardW}px)`;
-  }
-
-  // Auto-advance carousels (only needed if more than 3 cards per row)
-  // Currently each row has exactly 3 cards (Museums/Theatres/Music Halls) so auto-advance is disabled.
-  // Uncomment below if you add more than 3 cards to any row.
-  /*
-  ['manhattan','brooklyn','queens','bronx','staten'].forEach((id, i) => {
-    setInterval(() => {
-      const track = document.getElementById('track-' + id);
-      if (!track) return;
-      const max = track.children.length - 3;
-      if (state[id] >= max) state[id] = -1;
-      slide(id, 1);
-    }, 4500 + i * 600);
-  });
-  */
-</script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,164 +1,1003 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Queens — ArtReach</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queens — ArtReach</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html" class="nav-logo">Art<span>Reach</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../faq.html">Field Trip Guide</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-<nav>
-  <a href="../index.html" class="nav-logo">Art<span>Reach</span></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../about.html">About</a></li>
-    <li><a href="../faq.html">Field Trip Guide</a></li>
-    <li><a href="../contact.html">Contact</a></li>
-  </ul>
-</nav>
+    <!-- ── PAGE HERO ── -->
+    <section class="page-hero">
+      <a href="../index.html" class="detail-back">← Back to All Boroughs</a>
+      <p class="page-hero-eyebrow">Browse by Institution Type</p>
+      <!-- EDIT (per borough file): Borough name in headline -->
+      <h1><em>Queens</em></h1>
+    </section>
 
-<!-- ── PAGE HERO ── -->
-<section class="page-hero">
-  <a href="../index.html" class="detail-back">← Back to All Boroughs</a>
-  <p class="page-hero-eyebrow">Browse by Institution Type</p>
-  <!-- EDIT (per borough file): Borough name in headline -->
-  <h1><em>Queens</em></h1>
-</section>
+    <!-- ── MAIN CONTENT ── -->
+    <section class="section">
+      <!-- TYPE FILTER TABS -->
+      <div class="type-tabs">
+        <button class="type-tab active" onclick="filterType('all', this)">
+          All
+        </button>
+        <button class="type-tab" onclick="filterType('museum', this)">
+          Museums
+        </button>
+        <button class="type-tab" onclick="filterType('theatre', this)">
+          Theatres
+        </button>
+        <button class="type-tab" onclick="filterType('music', this)">
+          Music Halls
+        </button>
+      </div>
 
-<!-- ── MAIN CONTENT ── -->
-<section class="section">
-
-  <!-- TYPE FILTER TABS -->
-  <div class="type-tabs">
-    <button class="type-tab active" onclick="filterType('all', this)">All</button>
-    <button class="type-tab" onclick="filterType('museum', this)">Museums</button>
-    <button class="type-tab" onclick="filterType('theatre', this)">Theatres</button>
-    <button class="type-tab" onclick="filterType('music', this)">Music Halls</button>
-  </div>
-
-  <!-- ── VENUE GRID ──
+      <!-- ── VENUE GRID ──
        HOW TO ADD A VENUE:
        1. Copy one complete <a class="venue-card"> block below
        2. Paste it inside the .venue-grid div
        3. Change data-type to "museum", "theatre", or "music"
-       4. Fill in all the <!-- EDIT --> fields
-       5. The card will automatically appear in the right filtered view
-  -->
-  <div class="venue-grid" id="venue-grid">
+       4. Fill in all the fields 
+       5. The card will automatically appear in the right filtered view-->
 
-    <!-- ═══════════════════════════════════════
+      <div class="venue-grid" id="venue-grid">
+        <!-- ═══════════════════════════════════════
          VENUE CARD TEMPLATE — copy this block to add a new venue
          Change data-type to: museum | theatre | music
          ═══════════════════════════════════════ -->
-    <a href="../venues/venue-template.html" class="venue-card" data-type="museum">
-      <div class="venue-card-body">
-        <!-- EDIT: Institution type label (Museum / Theatre / Music Hall) -->
-        <div class="venue-card-type">Museum</div>
-        <!-- EDIT: Venue name -->
-        <div class="venue-card-name">The Metropolitan Museum of Art</div>
-        <!-- EDIT: 1-2 sentence description of what makes this venue great for students -->
-        <div class="venue-card-desc">One of the world's largest and most comprehensive art museums, with collections spanning 5,000 years of culture from every corner of the globe.</div>
-        <div class="venue-card-meta">
-          <!-- EDIT: Street address -->
-          <span>📍 1000 Fifth Ave, New York, NY 10028</span>
-          <!-- EDIT: Hours (or "Hours vary — check website") -->
-          <span>🕐 Sun–Thu 10am–5pm, Fri–Sat 10am–9pm</span>
-          <!-- EDIT: Phone number -->
-          <span>📞 (212) 535-7710</span>
-          <!-- EDIT: Website URL — update the href AND the display text -->
-          <span>🌐 <a href="https://www.metmuseum.org" target="_blank" onclick="event.stopPropagation()" style="color:var(--blush);">metmuseum.org</a></span>
-        </div>
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/aaron-copland.jpg"
+            alt="Aaron Copland School of Music"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">Aaron Copland School of Music</div>
+            <div class="venue-card-desc">
+              A CUNY conservatory at Queens College presenting symphonic
+              concerts, chamber music, opera workshops, and student/faculty
+              recitals.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 65-30 Kissena Blvd, Queens, NY 11367</span>
+              <span>📞 (718) 997-3800</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.qc.cuny.edu/academics/music/"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >qc.cuny.edu</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/colden-auditorium.jpg"
+            alt="Colden Auditorium"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">Colden Auditorium</div>
+            <div class="venue-card-desc">
+              A major hall within the Kupferberg Center, hosting classical
+              concerts, ballet, opera-adjacent works, and international
+              ensembles.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 Reeves Ave, Flushing, NY 11367</span>
+              <span>📞 (718) 793-8080</span>
+              <span
+                >🌐
+                <a
+                  href="https://kupferbergcenter.org/"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >kupferbergcenter.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/flushing-town-hall.jpg"
+            alt="Flushing Town Hall"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">Flushing Town Hall</div>
+            <div class="venue-card-desc">
+              Historic cultural venue featuring chamber music, classical
+              concerts, and global fine-arts traditions.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 137-35 Northern Blvd., Flushing, NY 11354</span>
+              <span>📞 (718) 463-7700 ext. 222</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.flushingtownhall.org/"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >flushingtownhall.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/lefrak-concert-hall.jpg"
+            alt="Lefrak Concert Hall"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">Lefrak Concert Hall</div>
+            <div class="venue-card-desc">
+              Large concert hall at Queens College specializing in orchestral
+              concerts, classical repertoire, and formal recitals.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 153-49 Reeves Ave, Flushing, NY 11367</span>
+              <span>📞 (718) 997-3800</span>
+              <span
+                >🌐
+                <a
+                  href="https://kupferbergcenter.org/"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >kupferbergcenter.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/queensborough-pac.jpg"
+            alt="Queensborough Performing Arts Center"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">
+              Queensborough Performing Arts Center
+            </div>
+            <div class="venue-card-desc">
+              A formal campus venue presenting classical music, ballet, and
+              opera-adjacent performances.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 222-05 56th Ave, Bayside, NY 11364</span>
+              <span>📞 (718) 631-6311</span>
+              <span
+                >🌐
+                <a
+                  href="https://qpac.qcc.cuny.edu/"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >qpac.qcc.cuny.edu</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="music"
+        >
+          <img
+            src="../photos/tony-bennett-hall.jpg"
+            alt="Tony Bennett Concert Hall"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
+          <div class="venue-card-body">
+            <div class="venue-card-type">Music Hall</div>
+            <div class="venue-card-name">Tony Bennett Concert Hall</div>
+            <div class="venue-card-desc">
+              Formal concert space featuring classical, jazz, orchestral, and
+              student-led fine-arts performances.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 35-12 35th Ave, Astoria, NY 11106</span>
+              <span>📞 (718) 361-9920</span>
+              <span
+                >🌐
+                <a
+                  href="https://franksinatraschoolofthearts.org/apps/pages/index.jsp?uREC_ID=342427&type=d"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >franksinatraschoolofthearts.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+        <!-- ─── BLACK SPECTRUM THEATER CO. INC. ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Black Spectrum Theater Co. Inc.</div>
+            <div class="venue-card-desc">
+              Venue dedicated to African-American culture through theatrical
+              productions & films.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 177-01 Baisley Blvd, Jamaica, NY 11434</span>
+              <span>📞 (718) 723-1800</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.blackspectrum.com/"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >blackspectrum.com</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── GOLDSTEIN THEATRE (QUEENS COLLEGE) ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">
+              Goldstein Theatre (Queens College)
+            </div>
+            <div class="venue-card-desc">
+              Community college-based performing arts theater.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 64th Ave, Kew Gardens Hills, NY 11367</span>
+              <span>📞 (718) 997-3090</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.qc.cuny.edu/academics/dtd/goldstein-theatre-2/"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >qc.cuny.edu</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── JAMAICA PERFORMING ARTS CENTER (JPAC) ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">
+              Jamaica Performing Arts Center (JPAC)
+            </div>
+            <div class="venue-card-desc">
+              Venue offering performances and arts education.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 153-10 Jamaica Ave, Jamaica, NY 11432</span>
+              <span>📞 (718) 618-6170</span>
+              <span
+                >🌐
+                <a
+                  href="https://jcal.org/"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >jcal.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── KUPFERBERG CENTER FOR THE ARTS (QUEENS COLLEGE) ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">
+              Kupferberg Center for the Arts (Queens College)
+            </div>
+            <div class="venue-card-desc">
+              Contemporary Queens College performing arts venue.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 153-49 Reeves Ave, Flushing, NY 11367</span>
+              <span>📞 (718) 793-8080</span>
+              <span
+                >🌐
+                <a
+                  href="http://kupferbergcenter.org/"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >kupferbergcenter.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── LAGUARDIA PERFORMING ARTS CENTER ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">LaGuardia Performing Arts Center</div>
+            <div class="venue-card-desc">
+              Community college-based venue for music, dance & theater by
+              international & New York performers.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 45-50 Van Dam St, Long Island City, NY 11101</span>
+              <span>📞 (718) 482-5151</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.laguardia.edu/venue/laguardia-performing-arts-center/"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >laguardia.edu</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── MAGGIE'S LITTLE THEATER ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Maggie's Little Theater</div>
+            <div class="venue-card-desc">Theater & performance venue.</div>
+            <div class="venue-card-meta">
+              <span>📍 66-05 79th Pl, Middle Village, NY 11379</span>
+              <span>📞 (347) 286-8508</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.maggieslittletheater.org/"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >maggieslittletheater.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── MILTON G. BASSIN PERFORMING ARTS CENTER ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">
+              Milton G. Bassin Performing Arts Center
+            </div>
+            <div class="venue-card-desc">Theater & performance venue.</div>
+            <div class="venue-card-meta">
+              <span>📍 94-45 Guy R Brewer Blvd, Jamaica, NY 11451</span>
+              <span>📞 (718) 262-3750</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.cunystages.org/listing/milton-g-bassin-performing-arts-center"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >cunystages.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── PARKSIDE PLAYERS ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Parkside Players</div>
+            <div class="venue-card-desc">
+              Local community theater group associated with the Grace Lutheran
+              Church.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 103-15 Union Tpke, Forest Hills, NY 11375</span>
+              <span>📞 (646) 847-9429</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.parksideplayers.com/"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >parksideplayers.com</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── QUEENS THEATRE ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Queens Theatre</div>
+            <div class="venue-card-desc">Theater & performance venue.</div>
+            <div class="venue-card-meta">
+              <span
+                >📍 Flushing Meadows Corona Park, 14 United Nations Ave S,
+                Corona, NY 11368</span
+              >
+              <span>📞 (718) 760-0064</span>
+              <span
+                >🌐
+                <a
+                  href="https://queenstheatre.org/"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >queenstheatre.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── STONE CIRCLE THEATRE ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Stone Circle Theatre</div>
+            <div class="venue-card-desc">Performing arts & music venue.</div>
+            <div class="venue-card-meta">
+              <span>📍 59-14 70th Ave, Ridgewood, NY 11385</span>
+              <span>📞 (646) 708-6746</span>
+              <span
+                >🌐
+                <a
+                  href="https://stonecircletheatre.org/"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >stonecircletheatre.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── THALIA SPANISH THEATRE ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">Thalia Spanish Theatre</div>
+            <div class="venue-card-desc">
+              Bilingual theater celebrating Latin American culture.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 41-17 Greenpoint Ave, Sunnyside, NY 11104</span>
+              <span>📞 (718) 729-3880</span>
+              <span
+                >🌐
+                <a
+                  href="https://thaliatheatre.org/"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >thaliatheatre.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!-- ─── THE LITTLE THEATRE (ST. JOHN'S UNIVERSITY) ─── -->
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="theatre"
+        >
+          <div class="venue-card-body">
+            <div class="venue-card-type">Theatre</div>
+            <div class="venue-card-name">
+              The Little Theatre (St. John's University)
+            </div>
+            <div class="venue-card-desc">Theater & performance venue.</div>
+            <div class="venue-card-meta">
+              <span>📍 8000 Utopia Pkwy, Queens, NY 11439</span>
+              <span>📞 (718) 990-2000</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.stjohns.edu/news-media/photo-galleries/little-theatre"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  style="color: var(--blush)"
+                  >stjohns.edu</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Culture Lab LIC</div>
+            <div class="venue-card-desc">
+              Relaxed warehouse-style gallery space in Long Island City
+              exhibiting art and hosting live music and theater events in a
+              creative, accessible setting.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 5-25 46th Avenue, Long Island City, NY 11101</span>
+              <span>📞 (347) 848-0030</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.culturelablic.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >culturelablic.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Godwin-Ternbach Museum</div>
+            <div class="venue-card-desc">
+              Professional not-for-profit art institution on the Queens College
+              campus, offering diverse collections and educational programming
+              for students and the public.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 65-30 Kissena Blvd., Flushing, NY 11367</span>
+              <span>📞 (718) 997-4747</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.gtmuseum.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >gtmuseum.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">
+              Jamaica Center for Arts & Learning
+            </div>
+            <div class="venue-card-desc">
+              Performing and visual arts center founded in 1972 to serve and
+              revitalize the Jamaica community, offering exhibitions,
+              performances, and arts education programs.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 161-04 Jamaica Avenue, Jamaica, NY 11432</span>
+              <span>📞 (718) 658-7400</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.jcal.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >jcal.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Louis Armstrong House Museum</div>
+            <div class="venue-card-desc">
+              Historic house museum in Corona preserving the home of jazz legend
+              Louis Armstrong and his wife Lucille Wilson, offering guided tours
+              and educational programs rooted in music history.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 34-56 107th Street, Corona, NY 11368</span>
+              <span>📞 (718) 478-8274</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.louisarmstronghouse.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >louisarmstronghouse.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">MoMA PS1</div>
+            <div class="venue-card-desc">
+              Contemporary art institution in Long Island City and one of the
+              oldest and largest organizations in the United States dedicated to
+              contemporary art, affiliated with the Museum of Modern Art.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 22-25 Jackson Avenue, Long Island City, NY 11101</span>
+              <span>📞 (718) 784-2086</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.momaps1.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >momaps1.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Queens College Art Center</div>
+            <div class="venue-card-desc">
+              Free public exhibition space within the Rosenthal Library at
+              Queens College, showcasing work by emerging and established
+              artists from the local and international art community.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 65-30 Kissena Blvd., Flushing, NY 11367</span>
+              <span>📞 (718) 997-5000</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.qc.cuny.edu"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >qc.cuny.edu</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">Queens Museum</div>
+            <div class="venue-card-desc">
+              Art museum and educational center in Flushing Meadows Corona Park,
+              home to the iconic Panorama of New York City and a wide range of
+              exhibitions, school programs, and community events.
+            </div>
+            <div class="venue-card-meta">
+              <span
+                >📍 NYC Building, Flushing Meadows Corona Park, Queens, NY
+                11368</span
+              >
+              <span>📞 (718) 592-9700</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.queensmuseum.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >queensmuseum.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="../venues/venue-template.html"
+          class="venue-card"
+          data-type="museum"
+        >
+          <div
+            class="ph"
+            style="
+              width: 100%;
+              height: 180px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 3rem;
+              background: var(--brown);
+            "
+          >
+            🏛
+          </div>
+          <div class="venue-card-body">
+            <div class="venue-card-type">Museum</div>
+            <div class="venue-card-name">The Living Museum</div>
+            <div class="venue-card-desc">
+              Unique art studio at Creedmoor Psychiatric Center dedicated to
+              presenting art produced by patients, offering a powerful and
+              humanizing lens on creativity, mental health, and expression.
+            </div>
+            <div class="venue-card-meta">
+              <span>📍 80-45 Winchester Blvd., Queens Village, NY 11427</span>
+              <span>📞 (718) 264-3490</span>
+              <span
+                >🌐
+                <a
+                  href="https://www.thelivingmuseum.org"
+                  target="_blank"
+                  style="color: var(--blush)"
+                  >thelivingmuseum.org</a
+                ></span
+              >
+            </div>
+          </div>
+        </a>
+        <!-- ADD MORE VENUE CARDS HERE — copy any card block above and edit the fields -->
       </div>
-    </a>
+      <!-- end .venue-grid -->
 
-    <!-- ─── EXAMPLE THEATRE CARD ─── -->
-    <a href="../venues/venue-template.html" class="venue-card" data-type="theatre">
-      <div class="venue-card-body">
-        <div class="venue-card-type">Theatre</div>
-        <div class="venue-card-name">The Public Theater</div>
-        <div class="venue-card-desc">A landmark Off-Broadway institution committed to producing works that reflect the breadth of American experience, with robust education programs for NYC students.</div>
-        <div class="venue-card-meta">
-          <span>📍 425 Lafayette St, New York, NY 10003</span>
-          <span>🕐 Box office hours vary by production</span>
-          <span>📞 (212) 539-8500</span>
-          <span>🌐 <a href="https://publictheater.org" target="_blank" onclick="event.stopPropagation()" style="color:var(--blush);">publictheater.org</a></span>
-        </div>
+      <!-- Empty state (shown when a filter has no results) -->
+      <div
+        id="empty-state"
+        style="
+          display: none;
+          text-align: center;
+          padding: 4rem 0;
+          color: var(--taupe);
+        "
+      >
+        <div style="font-size: 2.5rem; margin-bottom: 1rem">🏛</div>
+        <p
+          style="
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--navy);
+          "
+        >
+          No venues yet in this category.
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.88rem">
+          Check back soon, or
+          <a href="../contact.html" style="color: var(--blush)">suggest one</a>.
+        </p>
       </div>
-    </a>
+    </section>
 
-    <!-- ─── EXAMPLE MUSIC HALL CARD ─── -->
-    <a href="../venues/venue-template.html" class="venue-card" data-type="music">
-      <div class="venue-card-body">
-        <div class="venue-card-type">Music Hall</div>
-        <div class="venue-card-name">Carnegie Hall</div>
-        <div class="venue-card-desc">One of the most prestigious concert venues in the world, Carnegie Hall offers extensive education and student programs throughout the season.</div>
-        <div class="venue-card-meta">
-          <span>📍 881 Seventh Ave, New York, NY 10019</span>
-          <span>🕐 Box office Mon–Sat 11am–6pm</span>
-          <span>📞 (212) 247-7800</span>
-          <span>🌐 <a href="https://www.carnegiehall.org" target="_blank" onclick="event.stopPropagation()" style="color:var(--blush);">carnegiehall.org</a></span>
-        </div>
-      </div>
-    </a>
+    <footer>
+      <strong>ArtReach</strong>
+      © 2026 ArtReach. Connecting NYC students with culture.
+    </footer>
 
-    <!-- ADD MORE VENUE CARDS HERE — copy any card block above and edit the fields -->
-
-  </div><!-- end .venue-grid -->
-
-  <!-- Empty state (shown when a filter has no results) -->
-  <div id="empty-state" style="display:none;text-align:center;padding:4rem 0;color:var(--taupe);">
-    <div style="font-size:2.5rem;margin-bottom:1rem;">🏛</div>
-    <p style="font-family:var(--font-display);font-size:1.4rem;color:var(--navy);">No venues yet in this category.</p>
-    <p style="margin-top:.5rem;font-size:.88rem;">Check back soon, or <a href="../contact.html" style="color:var(--blush);">suggest one</a>.</p>
-  </div>
-
-</section>
-
-<footer>
-  <strong>ArtReach</strong>
-  © 2026 ArtReach. Connecting NYC students with culture.
-</footer>
-
-<script>
-  // Read ?type= from URL and pre-select the matching tab on load
-  function getUrlType() {
-    const params = new URLSearchParams(window.location.search);
-    const t = params.get('type');
-    if (t === 'museums') return 'museum';
-    if (t === 'theatres') return 'theatre';
-    if (t === 'music') return 'music';
-    return 'all';
-  }
-
-  function filterType(type, btn) {
-    // Update active tab
-    document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('active'));
-    if (btn) btn.classList.add('active');
-
-    // Show/hide cards
-    const cards = document.querySelectorAll('.venue-card');
-    let visible = 0;
-    cards.forEach(card => {
-      const match = type === 'all' || card.dataset.type === type;
-      card.style.display = match ? 'block' : 'none';
-      if (match) visible++;
-    });
-
-    document.getElementById('empty-state').style.display = visible === 0 ? 'block' : 'none';
-  }
-
-  // Apply URL param filter on load
-  window.addEventListener('DOMContentLoaded', () => {
-    const type = getUrlType();
-    if (type !== 'all') {
-      const tabMap = { museum: 1, theatre: 2, music: 3 };
-      const tabs = document.querySelectorAll('.type-tab');
-      filterType(type, tabs[tabMap[type]]);
-    }
-  });
-</script>
-
-</body>
+    <script src="../script.js"></script>
+  </body>
 </html>
