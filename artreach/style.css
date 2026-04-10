@@ -70,7 +70,7 @@ nav {
 .nav-links a {
   display: inline-block;
   padding: 0.45rem 1rem;
-  font-size: 0.72rem;
+  font-size: 0.95rem;
   letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--taupe);
@@ -279,7 +279,7 @@ nav {
   );
 }
 .card-tag {
-  font-size: 0.62rem;
+  font-size: 1rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--blush);
@@ -287,13 +287,13 @@ nav {
 }
 .card-name {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 400;
   color: var(--sand);
   line-height: 1.2;
 }
 .card-sub {
-  font-size: 0.7rem;
+  font-size: 1.8rem;
   color: var(--taupe);
   margin-top: 0.2rem;
 }
@@ -717,12 +717,12 @@ nav {
 }
 .feature-btn-label {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: var(--sand);
   font-weight: 400;
 }
 .feature-btn-sub {
-  font-size: 0.84rem;
+  font-size: 1rem;
   color: var(--taupe);
   margin-top: 0.3rem;
   line-height: 1.5;
@@ -734,12 +734,12 @@ footer {
   color: var(--taupe);
   text-align: center;
   padding: 2.5rem 3rem;
-  font-size: 0.78rem;
+  font-size: 1rem;
   letter-spacing: 0.1em;
 }
 footer strong {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: var(--sand);
   font-weight: 400;
   display: block;
@@ -748,7 +748,6 @@ footer strong {
 
 footer a{
   color: var(--sand);
-
 }
 
 /* ── TYPE FILTER TABS (borough pages) ── */
