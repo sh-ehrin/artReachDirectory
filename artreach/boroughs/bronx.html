@@ -60,14 +60,14 @@
          VENUE CARD TEMPLATE — copy this block to add a new venue
          Change data-type to: museum | theatre | music
          ═══════════════════════════════════════ -->
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="music"
+          onclick="window.location='../venues/venue-template.html'"
         >
           <img
-            src="../photos/baad.jpg"
-            alt="Bronx Academy of Arts and Dance"
+            src="../photos/bronxAcademyofArtsandDance.webp"
+            alt="Bronx Academy of Arts and Dance (BAAD!)"
             style="width: 100%; height: 180px; object-fit: cover"
           />
           <div class="venue-card-body">
@@ -87,21 +87,22 @@
                 <a
                   href="https://www.baadbronx.org/"
                   target="_blank"
+                  onclick="event.stopPropagation()"
                   style="color: var(--blush)"
                   >baadbronx.org</a
                 ></span
               >
             </div>
           </div>
-        </a>
+        </div>
 
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="music"
+          onclick="window.location='../venues/venue-template.html'"
         >
           <img
-            src="../photos/bronx-music-heritage.jpg"
+            src="../photos/bronx music heritage.jpg"
             alt="Bronx Music Heritage Center"
             style="width: 100%; height: 180px; object-fit: cover"
           />
@@ -120,21 +121,22 @@
                 <a
                   href="https://bronxmusichall.org/"
                   target="_blank"
+                  onclick="event.stopPropagation()"
                   style="color: var(--blush)"
                   >bronxmusichall.org</a
                 ></span
               >
             </div>
           </div>
-        </a>
+        </div>
 
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="music"
+          onclick="window.location='../venues/venue-template.html'"
         >
           <img
-            src="../photos/hostos.jpg"
+            src="../photos/hostosCenterforTheArtsAndCulture.jpg"
             alt="Hostos Center for the Arts & Culture"
             style="width: 100%; height: 180px; object-fit: cover"
           />
@@ -155,21 +157,22 @@
                 <a
                   href="https://www.hostos.cuny.edu/culturearts/"
                   target="_blank"
+                  onclick="event.stopPropagation()"
                   style="color: var(--blush)"
                   >hostos.cuny.edu</a
                 ></span
               >
             </div>
           </div>
-        </a>
+        </div>
 
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="music"
+          onclick="window.location='../venues/venue-template.html'"
         >
           <img
-            src="../photos/lehman-center.jpg"
+            src="../photos/lehmanCenterforThePerformingArts.jpg"
             alt="Lehman Center for the Performing Arts"
             style="width: 100%; height: 180px; object-fit: cover"
           />
@@ -190,21 +193,22 @@
                 <a
                   href="https://www.lehmancenter.org/"
                   target="_blank"
+                  onclick="event.stopPropagation()"
                   style="color: var(--blush)"
                   >lehmancenter.org</a
                 ></span
               >
             </div>
           </div>
-        </a>
+        </div>
 
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
-          data-type="music"
+          data-type="theatre"
+          onclick="window.location='../venues/venue-template.html'"
         >
           <img
-            src="../photos/pregones.jpg"
+            src="../photos/Pregones.jpg"
             alt="Pregones / Puerto Rican Traveling Theater"
             style="width: 100%; height: 180px; object-fit: cover"
           />
@@ -225,21 +229,22 @@
                 <a
                   href="https://pregonesprtt.org/"
                   target="_blank"
+                  onclick="event.stopPropagation()"
                   style="color: var(--blush)"
                   >pregonesprtt.org</a
                 ></span
               >
             </div>
           </div>
-        </a>
+        </div>
 
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="music"
+          onclick="window.location='../venues/venue-template.html'"
         >
           <img
-            src="../photos/riverdale-temple.jpg"
+            src="../photos/riverdaleTemple.jpg"
             alt="Riverdale Temple Cultural Arts Series"
             style="width: 100%; height: 180px; object-fit: cover"
           />
@@ -260,21 +265,22 @@
                 <a
                   href="https://www.riverdaletemple.org/"
                   target="_blank"
+                  onclick="event.stopPropagation()"
                   style="color: var(--blush)"
                   >riverdaletemple.org</a
                 ></span
               >
             </div>
           </div>
-        </a>
+        </div>
 
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="music"
+          onclick="window.location='../venues/venue-template.html'"
         >
           <img
-            src="../photos/wave-hill.jpg"
+            src="../photos/waveHillArmorHall.jpg"
             alt="Wave Hill – Armor Hall"
             style="width: 100%; height: 180px; object-fit: cover"
           />
@@ -293,19 +299,25 @@
                 <a
                   href="https://www.wavehill.org/"
                   target="_blank"
+                  onclick="event.stopPropagation()"
                   style="color: var(--blush)"
                   >wavehill.org</a
                 ></span
               >
             </div>
           </div>
-        </a>
+        </div>
         <!-- ─── OPEN HYDRANT THEATER COMPANY ─── -->
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="theatre"
+          onclick="window.location='../venues/venue-template.html'"
         >
+          <img
+            src="../photos/openHydrantTheaterCompany.jpg"
+            alt="Open Hydrant Theater Company"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
           <div class="venue-card-body">
             <div class="venue-card-type">Theatre</div>
             <div class="venue-card-name">Open Hydrant Theater Company</div>
@@ -329,45 +341,19 @@
               >
             </div>
           </div>
-        </a>
-
-        <!-- ─── LEHMAN STAGES (LEHMAN COLLEGE) ─── -->
-        <a
-          href="../venues/venue-template.html"
-          class="venue-card"
-          data-type="theatre"
-        >
-          <div class="venue-card-body">
-            <div class="venue-card-type">Theatre</div>
-            <div class="venue-card-name">Lehman Stages (Lehman College)</div>
-            <div class="venue-card-desc">
-              Professional theater program at Lehman College operating the
-              500-seat Lovinger Theater, producing original cultural programming
-              for students and the broader Bronx community.
-            </div>
-            <div class="venue-card-meta">
-              <span>📍 250 Bedford Park Blvd W, Bronx, NY 10468</span>
-              <span>📞 (718) 960-8025</span>
-              <span
-                >🌐
-                <a
-                  href="http://www.lehmanstages.org"
-                  target="_blank"
-                  onclick="event.stopPropagation()"
-                  style="color: var(--blush)"
-                  >lehmanstages.org</a
-                ></span
-              >
-            </div>
-          </div>
-        </a>
+        </div>
 
         <!-- ─── CASITA MARIA CENTER FOR ARTS & EDUCATION ─── -->
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="theatre"
+          onclick="window.location='../venues/venue-template.html'"
         >
+          <img
+            src="../photos/casitaMaria.webp"
+            alt="Casita Maria Center for Arts & Education"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
           <div class="venue-card-body">
             <div class="venue-card-type">Theatre</div>
             <div class="venue-card-name">
@@ -394,45 +380,19 @@
               >
             </div>
           </div>
-        </a>
-
-        <!-- ─── RIVERDALE CHILDREN'S THEATRE ─── -->
-        <a
-          href="../venues/venue-template.html"
-          class="venue-card"
-          data-type="theatre"
-        >
-          <div class="venue-card-body">
-            <div class="venue-card-type">Theatre</div>
-            <div class="venue-card-name">Riverdale Children's Theatre</div>
-            <div class="venue-card-desc">
-              Award-winning nonprofit youth theater program producing full-scale
-              musical productions and offering training in theater, music, and
-              dance for children across the Bronx and beyond.
-            </div>
-            <div class="venue-card-meta">
-              <span>📍 660 W 237th St, Bronx, NY 10463</span>
-              <span>📞 (646) 436-3045</span>
-              <span
-                >🌐
-                <a
-                  href="https://www.riverdaletheatre.org"
-                  target="_blank"
-                  onclick="event.stopPropagation()"
-                  style="color: var(--blush)"
-                  >riverdaletheatre.org</a
-                ></span
-              >
-            </div>
-          </div>
-        </a>
+        </div>
 
         <!-- ─── CITY ISLAND THEATER GROUP (CITG) ─── -->
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="theatre"
+          onclick="window.location='../venues/venue-template.html'"
         >
+          <img
+            src="../photos/cityIslanTheaterGroup.avif"
+            alt="City Island Theater Group (CITG)"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
           <div class="venue-card-body">
             <div class="venue-card-type">Theatre</div>
             <div class="venue-card-name">City Island Theater Group (CITG)</div>
@@ -455,26 +415,17 @@
               >
             </div>
           </div>
-        </a>
-        <a
-          href="../venues/venue-template.html"
+        </div>
+        <div
           class="venue-card"
           data-type="museum"
+          onclick="window.location='../venues/venue-template.html'"
         >
-          <div
-            class="ph"
-            style="
-              width: 100%;
-              height: 180px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 3rem;
-              background: var(--brown);
-            "
-          >
-            🏛
-          </div>
+          <img
+            src="../photos/bartowPellMansionMuseum.jpg"
+            alt="Bartow-Pell Mansion Museum"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
           <div class="venue-card-body">
             <div class="venue-card-type">Museum</div>
             <div class="venue-card-name">Bartow-Pell Mansion Museum</div>
@@ -491,33 +442,25 @@
                 <a
                   href="https://www.bartowpellmansionmuseum.org"
                   target="_blank"
+                  onclick="event.stopPropagation()"
                   style="color: var(--blush)"
                   >bartowpellmansionmuseum.org</a
                 ></span
               >
             </div>
           </div>
-        </a>
+        </div>
 
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="museum"
+          onclick="window.location='../venues/venue-template.html'"
         >
-          <div
-            class="ph"
-            style="
-              width: 100%;
-              height: 180px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 3rem;
-              background: var(--brown);
-            "
-          >
-            🏛
-          </div>
+          <img
+            src="../photos/bronxArtspace.jpg"
+            alt="BronxArtSpace"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
           <div class="venue-card-body">
             <div class="venue-card-type">Museum</div>
             <div class="venue-card-name">BronxArtSpace</div>
@@ -534,33 +477,25 @@
                 <a
                   href="https://www.bronxartspace.com"
                   target="_blank"
+                  onclick="event.stopPropagation()"
                   style="color: var(--blush)"
                   >bronxartspace.com</a
                 ></span
               >
             </div>
           </div>
-        </a>
+        </div>
 
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="museum"
+          onclick="window.location='../venues/venue-template.html'"
         >
-          <div
-            class="ph"
-            style="
-              width: 100%;
-              height: 180px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 3rem;
-              background: var(--brown);
-            "
-          >
-            🏛
-          </div>
+          <img
+            src="../photos/bronxDocumentaryCenter.png"
+            alt="Bronx Documentary Center"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
           <div class="venue-card-body">
             <div class="venue-card-type">Museum</div>
             <div class="venue-card-name">Bronx Documentary Center</div>
@@ -577,33 +512,25 @@
                 <a
                   href="https://www.bronxdoc.org"
                   target="_blank"
+                  onclick="event.stopPropagation()"
                   style="color: var(--blush)"
                   >bronxdoc.org</a
                 ></span
               >
             </div>
           </div>
-        </a>
+        </div>
 
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="museum"
+          onclick="window.location='../venues/venue-template.html'"
         >
-          <div
-            class="ph"
-            style="
-              width: 100%;
-              height: 180px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 3rem;
-              background: var(--brown);
-            "
-          >
-            🏛
-          </div>
+          <img
+            src="../photos/theBronxMuseum.jpg"
+            alt="The Bronx Museum of the Arts"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
           <div class="venue-card-body">
             <div class="venue-card-type">Museum</div>
             <div class="venue-card-name">The Bronx Museum of the Arts</div>
@@ -620,33 +547,25 @@
                 <a
                   href="https://www.bronxmuseum.org"
                   target="_blank"
+                  onclick="event.stopPropagation()"
                   style="color: var(--blush)"
                   >bronxmuseum.org</a
                 ></span
               >
             </div>
           </div>
-        </a>
+        </div>
 
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="museum"
+          onclick="window.location='../venues/venue-template.html'"
         >
-          <div
-            class="ph"
-            style="
-              width: 100%;
-              height: 180px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 3rem;
-              background: var(--brown);
-            "
-          >
-            🏛
-          </div>
+          <img
+            src="../photos/bronxRiverArtCenter.jpg"
+            alt="Bronx River Art Center"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
           <div class="venue-card-body">
             <div class="venue-card-type">Museum</div>
             <div class="venue-card-name">Bronx River Art Center</div>
@@ -663,76 +582,25 @@
                 <a
                   href="https://www.bronxriverart.org"
                   target="_blank"
+                  onclick="event.stopPropagation()"
                   style="color: var(--blush)"
                   >bronxriverart.org</a
                 ></span
               >
             </div>
           </div>
-        </a>
+        </div>
 
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="museum"
+          onclick="window.location='../venues/venue-template.html'"
         >
-          <div
-            class="ph"
-            style="
-              width: 100%;
-              height: 180px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 3rem;
-              background: var(--brown);
-            "
-          >
-            🏛
-          </div>
-          <div class="venue-card-body">
-            <div class="venue-card-type">Museum</div>
-            <div class="venue-card-name">BxArts Factory</div>
-            <div class="venue-card-desc">
-              South Bronx arts venue presenting public exhibitions, workshops,
-              and community programming that celebrates local creative talent
-              and fosters artistic engagement across the borough.
-            </div>
-            <div class="venue-card-meta">
-              <span>📍 240 East 153rd St., Bronx, NY 10451</span>
-              <span>📞 (929) 614-4344</span>
-              <span
-                >🌐
-                <a
-                  href="https://www.bxartsfactory.org"
-                  target="_blank"
-                  style="color: var(--blush)"
-                  >bxartsfactory.org</a
-                ></span
-              >
-            </div>
-          </div>
-        </a>
-
-        <a
-          href="../venues/venue-template.html"
-          class="venue-card"
-          data-type="museum"
-        >
-          <div
-            class="ph"
-            style="
-              width: 100%;
-              height: 180px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 3rem;
-              background: var(--brown);
-            "
-          >
-            🏛
-          </div>
+          <img
+            src="../photos/edgarAllanPoeCottage.webp"
+            alt="Edgar Allan Poe Cottage"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
           <div class="venue-card-body">
             <div class="venue-card-type">Museum</div>
             <div class="venue-card-name">Edgar Allan Poe Cottage</div>
@@ -749,76 +617,25 @@
                 <a
                   href="https://www.bronxhistoricalsociety.org/poe-cottage"
                   target="_blank"
+                  onclick="event.stopPropagation()"
                   style="color: var(--blush)"
                   >bronxhistoricalsociety.org</a
                 ></span
               >
             </div>
           </div>
-        </a>
+        </div>
 
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="museum"
+          onclick="window.location='../venues/venue-template.html'"
         >
-          <div
-            class="ph"
-            style="
-              width: 100%;
-              height: 180px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 3rem;
-              background: var(--brown);
-            "
-          >
-            🏛
-          </div>
-          <div class="venue-card-body">
-            <div class="venue-card-type">Museum</div>
-            <div class="venue-card-name">Longwood Art Gallery</div>
-            <div class="venue-card-desc">
-              Artist-driven gallery supporting Bronx-based and Latino artists
-              through curated exhibitions and public programming, operated by
-              Bronx Council on the Arts at Hostos Community College.
-            </div>
-            <div class="venue-card-meta">
-              <span>📍 2700 East Tremont Ave., Bronx, NY 10461</span>
-              <span>📞 (718) 931-9500</span>
-              <span
-                >🌐
-                <a
-                  href="https://www.bronxarts.org"
-                  target="_blank"
-                  style="color: var(--blush)"
-                  >bronxarts.org</a
-                ></span
-              >
-            </div>
-          </div>
-        </a>
-
-        <a
-          href="../venues/venue-template.html"
-          class="venue-card"
-          data-type="museum"
-        >
-          <div
-            class="ph"
-            style="
-              width: 100%;
-              height: 180px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 3rem;
-              background: var(--brown);
-            "
-          >
-            🏛
-          </div>
+          <img
+            src="../photos/museum of bronx history.jpg"
+            alt="Museum of Bronx History"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
           <div class="venue-card-body">
             <div class="venue-card-type">Museum</div>
             <div class="venue-card-name">Museum of Bronx History</div>
@@ -835,33 +652,25 @@
                 <a
                   href="https://www.bronxhistoricalsociety.org/museum"
                   target="_blank"
+                  onclick="event.stopPropagation()"
                   style="color: var(--blush)"
                   >bronxhistoricalsociety.org</a
                 ></span
               >
             </div>
           </div>
-        </a>
+        </div>
 
-        <a
-          href="../venues/venue-template.html"
+        <div
           class="venue-card"
           data-type="museum"
+          onclick="window.location='../venues/venue-template.html'"
         >
-          <div
-            class="ph"
-            style="
-              width: 100%;
-              height: 180px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 3rem;
-              background: var(--brown);
-            "
-          >
-            🏛
-          </div>
+          <img
+            src="../photos/vanCortlandtHouseMuseum.jpg"
+            alt="Van Cortlandt House Museum"
+            style="width: 100%; height: 180px; object-fit: cover"
+          />
           <div class="venue-card-body">
             <div class="venue-card-type">Museum</div>
             <div class="venue-card-name">Van Cortlandt House Museum</div>
@@ -879,13 +688,14 @@
                 <a
                   href="https://www.vchm.org"
                   target="_blank"
+                  onclick="event.stopPropagation()"
                   style="color: var(--blush)"
                   >vchm.org</a
                 ></span
               >
             </div>
           </div>
-        </a>
+        </div>
         <!-- ADD MORE VENUE CARDS HERE — copy any card block above and edit the fields -->
       </div>
       <!-- end .venue-grid -->

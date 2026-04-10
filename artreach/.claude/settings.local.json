@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -)",
+      "Bash(python3 -c ':*)",
+      "Bash(python3 fix_onclick.py)",
+      "Bash(grep -n \"\\\\\\\\\\\\\\\\'\" boroughs/manhattan.html)",
+      "Bash(python3 populate_images.py)",
+      "Bash(python populate_images.py)",
+      "Bash(py populate_images.py)",
+      "Bash(where python:*)",
+      "Bash(\"C:/Users/mirah/AppData/Local/Programs/Python/Python312/python.exe\" \"C:/Users/mirah/Desktop/artReachDirectory/artreach/populate_images.py\")",
+      "Bash(taskkill /F /IM python.exe)",
+      "Bash(del \"C:/Users/mirah/Desktop/artReachDirectory/artreach/populate_images.py\")"
+    ]
+  }
+}
