@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- EDIT: Page title = Venue Name — ArtReach -->
+    <title>The Museum of Modern Art — ArtReach</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html" class="nav-logo">Art<span>Reach</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../faq.html">Field Trip Guide</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ── VENUE HERO ── -->
+    <div class="detail-hero">
+      <!-- EDIT: Update href to link back to the correct borough page, e.g. ../boroughs/manhattan.html -->
+      <a href="../boroughs/manhattan.html" class="detail-back"
+        >← Back to Manhattan</a
+      >
+
+      <!-- EDIT: Institution type (Museum / Theatre / Music Hall) -->
+      <div class="detail-type">Museum</div>
+
+      <!-- EDIT: Full venue name -->
+      <div class="detail-name">
+        The Museum <br />
+        of Modern Art
+      </div>
+    </div>
+
+    <!-- ── VENUE BODY ── -->
+    <div class="detail-body">
+      <!-- LEFT: Description & additional info -->
+      <div>
+        <!-- EDIT: 2–4 paragraph description of the venue.
+         Include what makes it special, what types of programs exist for students,
+         any notable collections or performances, and any field-trip-specific notes. -->
+        <p class="detail-desc">
+          MoMA is home to one of the world's most influential collections of
+          modern and contemporary art, featuring over 200,000 works across
+          painting, sculpture, film, design, and photography. Located in the
+          heart of Midtown Manhattan, it remains one of the most visited art
+          museums in the world.
+        </p>
+        <p class="detail-desc">
+          MoMA's education department offers robust programming for school
+          groups, including guided gallery tours aligned with NYC curriculum
+          standards, hands-on artmaking workshops, and free educator resources
+          to prepare students before their visit.
+        </p>
+
+        <!-- EDIT (optional): Add a "What to See" or "Student Programs" section if relevant -->
+        <h3
+          style="
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--navy);
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+          "
+        >
+          Student Programs
+        </h3>
+        <!-- EDIT: List or paragraph describing programs for student groups -->
+        <p class="detail-desc" style="margin-bottom: 0">
+          MoMA offers free admission for NYC public school students and
+          teachers. Their 'MoMA for Schools' program provides curated gallery
+          experiences and curriculum-connected visits for students at all grade
+          levels. Pre-visit materials are available on their website.
+        </p>
+      </div>
+
+      <!-- RIGHT: Info card (sticky sidebar) -->
+      <div>
+        <div class="detail-info-card" style="position: sticky; top: 80px">
+          <h3>Visit Information</h3>
+
+          <span class="info-label">Address</span>
+          <!-- EDIT: Full street address -->
+          <p>11 W 53rd St<br />New York, NY 10019</p>
+
+          <span class="info-label">Hours</span>
+          <!-- EDIT: Hours of operation — be specific per day if needed -->
+          <p>
+            Monday, Wednesday, Thursday, Saturday, & Sunday: 10:30am – 5:30pm<br />
+            Tuesday: 10:30am – 4pm<br />
+            Friday: 10:30am – 8:30pm<br />
+            Closed Thanksgiving & Christmas
+          </p>
+
+          <span class="info-label">Admission</span>
+          <!-- EDIT: Admission pricing, especially for student groups -->
+          <p>
+            Free for NYC public school students ages 16 or under.<br />Older
+            than 16: Book with a culture pass from your local library. <br />
+            <a
+              href="https://www.queenslibrary.org/programs-activities/arts-culture/culture-pass"
+              >Queens</a
+            >
+            <br />
+            <a href="https://www.bklynlibrary.org/event-series/culture-pass"
+              >Brooklyn</a
+            >
+            <br />
+            <a href="https://www.nypl.org/blog/2018/07/16/culturepass"
+              >Manhattan & The Bronx</a
+            >
+          </p>
+
+          <span class="info-label">Phone</span>
+          <!-- EDIT: Main phone number -->
+          <p><a href="tel:2127089400">(212) 708-9400</a></p>
+
+          <span class="info-label">Website</span>
+          <!-- EDIT: Website URL — update both href and display text -->
+          <p>
+            <a href="https://www.moma.org/calendar/exhibitions" target="_blank"
+              >MoMa Exhibitions</a
+            >
+          </p>
+
+          <span class="info-label">Education / Groups</span>
+          <!-- EDIT: Direct link or phone number for education/school groups department -->
+          <p>
+            <a
+              href="https://www.moma.org/visit/tours/schoolform"
+              target="_blank"
+              >Book a Class Tour</a
+            >
+          </p>
+
+          <span class="info-label">Getting There</span>
+          <!-- EDIT: Transit directions for students -->
+          <p>
+            Subway: B, D, F to 47th-50th Sts–Rockefeller Center and E and M to
+            5th Ave–53rd St<br />Bus: BM2 , M104 , M5 , M50 , M7
+          </p>
+
+          <span class="info-label">Borough</span>
+          <!-- EDIT: Borough name -->
+          <p>Manhattan</p>
+
+          <div style="margin-top: 1.5rem">
+            <!-- EDIT: Update href to link to the borough page -->
+            <a
+              href="../boroughs/manhattan.html"
+              class="btn-primary"
+              style="
+                display: block;
+                text-align: center;
+                background: var(--blush);
+                color: var(--brown);
+              "
+              >← More in Manhattan</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end .detail-body -->
+
+    <footer>
+      <strong>ArtReach</strong>
+
+      <ul>
+        <a href="contact.html">Any Questions or suggestions? Contact Us!</a>
+      </ul>
+      © 2026 ArtReach. Connecting NYC students with culture.
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
